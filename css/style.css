@@ -1,0 +1,191 @@
+@import "./reset.css";
+
+/* 웹폰트 (Noto Sans KR / Crimson Text) */
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Noto+Sans+KR:wght@400;500;700&display=swap");
+
+/* css style */
+:root {
+  --main-color: #006640;
+  --text-light: #666;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 15px;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+h1.crimson {
+  font-family: "Crimson Text", serif;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+h2.crimson {
+  font-family: "Crimson Text", serif;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+a {
+  color: #000;
+}
+
+.ft-bold {
+  font-weight: 700;
+}
+
+.color-white {
+  color: #fff;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* ##### header ##### */
+
+#main-header {
+  height: 80px;
+}
+
+#main-header .container {
+  display: flex;
+  padding: 0 20px;
+  justify-content: space-between;
+  align-items: center;
+  /* outline: 1px solid blue; */
+  border-bottom: 0.5px solid #ccc;
+}
+
+#gnb {
+  z-index: 100;
+  /* outline: 1px solid red; */
+}
+
+/* 1단계 메뉴 */
+#gnb .depth1 {
+  display: flex;
+  height: 80px;
+}
+#gnb .depth1 > li {
+  width: 100px;
+  height: 100%;
+  display: inline-block;
+  margin: 0 10px;
+  text-align: center;
+  position: relative;
+}
+#gnb .depth1 > li > a {
+  line-height: 80px;
+  font-size: 16px;
+  font-weight: 500;
+  display: block;
+}
+
+/* 2단계 메뉴 */
+
+#gnb .depth2 {
+  background: #fff;
+  border: 0.1px solid #ccc;
+  margin-top: 1px;
+  padding: 10px;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+}
+
+#gnb .depth2 > li {
+  margin-bottom: 10px;
+}
+#gnb .depth2 > li:last-child {
+  margin-bottom: 0;
+}
+
+#gnb .depth2 a {
+  color: var(--text-light);
+}
+
+/* 호버효과 */
+
+#gnb .depth1 > li:hover > a {
+  color: var(--main-color);
+  font-weight: 700;
+}
+#gnb .depth1 > li::after {
+  content: "";
+  width: 0px;
+  height: 2px;
+  background: var(--main-color);
+  position: absolute;
+  left: 0;
+  top: 79px;
+  transition: 0.5s;
+}
+#gnb .depth1 > li:hover::after {
+  width: 100px;
+}
+
+#gnb .depth1 > li:hover .depth2 {
+  height: auto;
+  opacity: 1;
+  transition: 0.4s;
+}
+
+#gnb .depth2 > li:hover > a {
+  text-decoration: underline;
+}
+
+/* ##### footer ##### */
+
+#main-footer {
+  margin-top: 50px;
+}
+
+#main-footer .container {
+  background: #393939;
+  padding: 70px;
+  color: #999;
+  font-size: 14px;
+}
+
+#main-footer .footer-menu {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+#main-footer .footer-menu a {
+  color: #999;
+}
+
+#main-footer .footer-menu a.ft-str {
+  font-weight: 700;
+  color: #ffcc33;
+}
+
+#main-footer .address {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+#main-footer .copy {
+  font-weight: 700;
+}
