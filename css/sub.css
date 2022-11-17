@@ -158,11 +158,61 @@ a {
 .wrap {
   max-width: 1440px;
   margin: 0 auto;
-  background: #ccc;
   padding: 0 50px;
+  position: relative;
+  display: flex;
 }
 
-.wrap .lnb {
+/* ##### lnb ##### */
+.lnb {
+  width: 340px;
+  /* position: fixed; */
+  padding-top: 70px;
+  padding-right: 20px;
+}
+
+.lnb h3 {
+  position: relative;
+  padding: 20px 0;
+  border-bottom: 2px solid var(--main-color);
+}
+
+.lnb h3::before {
+  content: "";
+  width: 50px;
+  height: 6px;
+  background: var(--main-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.lnb .lnb-list li {
+  padding: 15px 10px;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.3);
+}
+
+.lnb .lnb-list li.active {
+  background: rgba(0, 102, 64, 0.1);
+}
+
+/* ##### main ##### */
+main {
+  width: calc(100% - 340px);
+}
+
+.sub-title {
+  padding: 52px 0 51px;
+  border-bottom: 0.5px solid #000;
+}
+
+.sub-path {
+  height: 53px;
+  /* padding-left: 10px; */
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 /* ::::::::::::::: 서브 개별 스타일 ::::::::::::::: */
@@ -176,7 +226,7 @@ a {
 
 #main-footer .container {
   background: #393939;
-  padding: 70px;
+  padding: 50px;
   color: #999;
   font-size: 14px;
 }
