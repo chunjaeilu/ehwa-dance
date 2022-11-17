@@ -173,11 +173,7 @@ a {
   display: flex;
   outline: 1px solid red;
 }
-.wrap main .section1 h2{
-  j
-  
- 
-}
+
 .wrap main .section1 img{
   margin-right: 20px;
 }
@@ -188,9 +184,7 @@ a {
 .wrap main .section1 .crimson .main-color{
  color:var(--main-color);
 }
-.wrap main .section1 .line{
-  
-}
+
 
 /*  */
 /* ##### footer ##### */
