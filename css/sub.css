@@ -61,6 +61,7 @@ a {
   position: relative;
 }
 
+/* ::::::::::::::: 서브 공통 스타일 ::::::::::::::: */
 /* ##### header ##### */
 
 #main-header {
@@ -154,7 +155,6 @@ a {
   text-decoration: underline;
 }
 
-/* ::::::::::::::: 서브 공통 스타일 ::::::::::::::: */
 .wrap {
   max-width: 1440px;
   margin: 0 auto;
@@ -166,12 +166,14 @@ a {
 /* ##### lnb ##### */
 .lnb {
   width: 340px;
+  min-width: 150px;
   /* position: fixed; */
   padding-top: 70px;
   padding-right: 20px;
 }
 
 .lnb h3 {
+  width: 100%;
   position: relative;
   padding: 20px 0;
   border-bottom: 2px solid var(--main-color);
@@ -179,7 +181,7 @@ a {
 
 .lnb h3::before {
   content: "";
-  width: 50px;
+  width: 70px;
   height: 6px;
   background: var(--main-color);
   position: absolute;
@@ -194,14 +196,17 @@ a {
 
 .lnb .lnb-list li.active {
   background: rgba(0, 102, 64, 0.1);
+  font-weight: 700;
 }
 
 /* ##### main ##### */
 main {
-  width: calc(100% - 340px);
+  width: 1000px;
+  position: relative;
 }
 
 .sub-title {
+  width: 100%;
   padding: 52px 0 51px;
   border-bottom: 0.5px solid #000;
 }
@@ -212,55 +217,12 @@ main {
   border-bottom: 0.5px solid rgba(0, 0, 0, 0.3);
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 6px;
+  font-size: 12px;
 }
 
 .sub-path a {
   height: 20px;
-}
-
-/* ::::::::::::::: 서브 개별 스타일 ::::::::::::::: */
-
-/* sub1-1 */
-/* ##### section1 ##### */
-.section1 {
-  display: flex;
-  outline: 1px solid red;
-  margin-top: 50px;
-}
-
-#sub1-1 .section1 .sub-main-visual {
-  margin-right: 20px;
-  width: 433px;
-}
-
-#sub1-1 .section1 .sub-main-visual img {
-  object-fit: cover;
-}
-
-#sub1-1 .section1 .textbox {
-  position: relative;
-}
-
-#sub1-1 .section1 h1 {
-  margin-top: 15px;
-  margin-bottom: 20px;
-}
-
-#sub1-1 .section1 h1 .main-color {
-  color: var(--main-color);
-}
-
-#sub1-1 .section1 h1 {
-  margin-top: 15px;
-  margin-bottom: 20px;
-}
-
-#sub1-1 .section1 .line {
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: -1;
 }
 
 /* ##### footer ##### */
@@ -299,4 +261,201 @@ main {
 
 #main-footer .copy {
   font-weight: 700;
+}
+
+/* ::::::::::::::: 서브 개별 스타일 ::::::::::::::: */
+
+/* sub1-1 */
+/* ##### section1 ##### */
+#sub1-1 .section1 {
+  padding: 50px 0;
+}
+
+#sub1-1 .section1 .section1-title {
+  display: flex;
+}
+
+#sub1-1 .section1 .sub-main-visual {
+  margin-right: 20px;
+  width: 433px;
+  height: 270px;
+}
+
+#sub1-1 .section1 .sub-main-visual img {
+  /* width: 100%; */
+  object-fit: cover;
+}
+
+#sub1-1 .section1 .textbox {
+  position: relative;
+}
+
+#sub1-1 .section1 h1 {
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+#sub1-1 .section1 h1 .main-color {
+  color: var(--main-color);
+}
+
+#sub1-1 .section1 h1 {
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+#sub1-1 .section1 h2 {
+  color: var(--text-light);
+}
+
+#sub1-1 .section1 .line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
+#sub1-1 .section1 > p {
+  margin-top: 15px;
+}
+
+/* ##### section2 ##### */
+
+#sub1-1 .section2 {
+  padding: 50px 0;
+}
+
+#sub1-1 .section2 .content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+#sub1-1 .section2 .content.left-55 {
+  margin-left: 56px;
+}
+
+#sub1-1 .section2 .content.left-170 {
+  margin-left: 170px;
+}
+
+#sub1-1 .section2 .text-box {
+  width: 440px;
+}
+
+#sub1-1 .section2 .text-box hr {
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+/* sub2-1 */
+
+/* ##### section1 ##### */
+#sub2-1 .section1 {
+  padding: 50px 0;
+}
+
+#sub2-1 .section1 .section1-title {
+  display: flex;
+}
+
+#sub2-1 .section1 .sub-main-visual {
+  margin-right: 20px;
+  width: 433px;
+  height: 270px;
+}
+
+#sub2-1 .section1 .sub-main-visual img {
+  object-fit: cover;
+}
+
+#sub2-1 .section1 .textbox {
+  position: relative;
+}
+
+#sub2-1 .section1 h1 {
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+#sub2-1 .section1 h1 .main-color {
+  color: var(--main-color);
+}
+
+#sub2-1 .section1 h1 {
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+#sub2-1 .section1 h2 {
+  color: var(--text-light);
+  font-size: 26px;
+}
+
+#sub2-1 .section1 .line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
+/* ##### section2 ##### */
+
+#sub2-1 .section2 {
+  padding-top: 50px;
+}
+
+#sub2-1 .section2 img {
+  margin-bottom: 50px;
+  width: 100%;
+}
+
+/* sub4-1 */
+/* ##### section1 ##### */
+#sub4-1 .section1 {
+  padding: 50px 0;
+}
+
+#sub4-1 .section1 .section1-title {
+  display: flex;
+}
+
+#sub4-1 .section1 .sub-main-visual {
+  margin-right: 20px;
+  width: 433px;
+  height: 270px;
+}
+
+#sub4-1 .section1 .sub-main-visual img {
+  /* width: 100%; */
+  object-fit: cover;
+}
+
+#sub4-1 .section1 .textbox {
+  position: relative;
+}
+
+#sub4-1 .section1 h1 {
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+#sub4-1 .section1 h1 .main-color {
+  color: var(--main-color);
+}
+
+#sub4-1 .section1 h1 {
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+#sub4-1 .section1 h2 {
+  color: var(--text-light);
+}
+
+#sub4-1 .section1 .line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
 }
