@@ -4,3 +4,5 @@
 URL : https://chunjaeilu.github.io/ehwa-dance/
 
 ## 팀 프로젝트 :: 홈페이지 리뉴얼_01
+
+수정 반영해 주세요!
