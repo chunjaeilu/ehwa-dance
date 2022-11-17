@@ -215,9 +215,54 @@ main {
   gap: 20px;
 }
 
+.sub-path a {
+  height: 20px;
+}
+
 /* ::::::::::::::: 서브 개별 스타일 ::::::::::::::: */
 
-/*  */
+/* sub1-1 */
+/* ##### section1 ##### */
+.section1 {
+  display: flex;
+  outline: 1px solid red;
+  margin-top: 50px;
+}
+
+#sub1-1 .section1 .sub-main-visual {
+  margin-right: 20px;
+  width: 433px;
+}
+
+#sub1-1 .section1 .sub-main-visual img {
+  object-fit: cover;
+}
+
+#sub1-1 .section1 .textbox {
+  position: relative;
+}
+
+#sub1-1 .section1 h1 {
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+#sub1-1 .section1 h1 .main-color {
+  color: var(--main-color);
+}
+
+#sub1-1 .section1 h1 {
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+#sub1-1 .section1 .line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
 /* ##### footer ##### */
 
 #main-footer {
