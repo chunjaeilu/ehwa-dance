@@ -1,0 +1,255 @@
+@import "./reset.css";
+
+/* 웹폰트 (Noto Sans KR / Crimson Text) */
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Noto+Sans+KR:wght@400;500;700&display=swap");
+
+/* font-family: 'Nanum Myeongjo', serif; */
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap");
+
+/* 미디어쿼리 */
+.web-only {
+  display: none;
+}
+
+/* 기본 css style */
+:root {
+  --main-color: #006640;
+  --text-light: #666;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 15px;
+}
+
+h1 {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+h1 .crimson,
+h1.crimson {
+  font-family: "Crimson Text", serif;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+a {
+  color: #000;
+}
+
+.ft-bold {
+  font-weight: 700;
+}
+
+.color-white {
+  color: #fff;
+}
+
+.container {
+  width: 100%;
+  position: relative;
+}
+
+/* ::::::::::::::: 서브 공통 스타일 ::::::::::::::: */
+/* ##### header ##### */
+
+#main-header {
+  height: 80px;
+}
+
+#main-header .container {
+  height: 100%;
+  display: flex;
+  padding: 0 20px;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 0.5px solid #ccc;
+}
+
+#main-header h1 img {
+  width: 115px;
+}
+
+#gnb {
+  display: none;
+}
+
+/* ##### wrap ##### */
+/* 본문 전체 */
+.wrap {
+  width: 100%;
+}
+
+/* ##### lnb ##### */
+
+.lnb h3 {
+  border-bottom: 2px solid var(--main-color);
+  line-height: 52px;
+  font-size: 15px;
+  padding: 0 20px;
+  background: var(--main-color);
+  color: #fff;
+}
+.lnb h3 a {
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lnb .lnb-list {
+  border-bottom: 2px solid var(--main-color);
+}
+.lnb .lnb-list li {
+  padding: 15px 20px;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.3);
+}
+
+.lnb .lnb-list li.active {
+  background: rgba(0, 102, 64, 0.1);
+  font-weight: 500;
+}
+
+.lnb .lnb-list li.active > a {
+  color: var(--main-color);
+}
+
+.lnb .lnb-list li:hover {
+  background: rgba(0, 102, 64, 0.1);
+  font-weight: 700;
+}
+
+/* 2뎁스 메뉴 가리기 */
+.lnb .lnb-list {
+  display: none;
+}
+
+/* ##### main ##### */
+main {
+  width: 100%;
+  padding: 0 20px;
+}
+
+.sub-title {
+  width: 100%;
+  padding: 24px 0;
+  border-bottom: 0.5px solid #000;
+}
+
+.sub-path {
+  height: 53px;
+  /* padding-left: 10px; */
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+}
+
+.sub-path a {
+  height: 20px;
+}
+
+/* ##### footer ##### */
+
+#main-footer {
+  margin-top: 50px;
+}
+
+#main-footer .container {
+  background: #393939;
+  padding: 35px 20px;
+  color: #999;
+  font-size: 12px;
+}
+
+#main-footer .footer-menu {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+#main-footer .footer-menu a {
+  color: #999;
+}
+
+#main-footer .footer-menu a.ft-str {
+  font-weight: 700;
+  color: #ffcc33;
+}
+
+#main-footer .address {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
+#main-footer .copy {
+  font-weight: 700;
+}
+
+/* ::::::::::::::: 서브 개별 스타일 ::::::::::::::: */
+
+/* sub1-1 */
+/* ##### section1 ##### */
+#sub1-1 .section1 {
+  padding: 30px 0 50px;
+}
+
+#sub1-1 .section1 .section1-title {
+  display: flex;
+  flex-direction: column;
+}
+
+#sub1-1 .section1 .sub-main-visual {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+#sub1-1 .section1 .sub-main-visual img {
+  width: 100%;
+  object-fit: cover;
+}
+
+#sub1-1 .section1 .textbox {
+  position: relative;
+}
+
+#sub1-1 .section1 h1 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+#sub1-1 .section1 h1 .main-color {
+  color: var(--main-color);
+}
+
+#sub1-1 .section1 h2 {
+  color: var(--text-light);
+  margin-bottom: 10px;
+}
+
+#sub1-1 .section1 .line {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
