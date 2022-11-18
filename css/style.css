@@ -22,6 +22,7 @@ h1 {
   font-weight: 700;
 }
 
+h1 .crimson,
 h1.crimson {
   font-family: "Crimson Text", serif;
   font-size: 40px;
@@ -33,6 +34,7 @@ h2 {
   font-weight: 700;
 }
 
+h2 .crimson,
 h2.crimson {
   font-family: "Crimson Text", serif;
   font-size: 26px;
@@ -41,6 +43,12 @@ h2.crimson {
 
 h3 {
   font-size: 24px;
+  font-weight: 700;
+}
+
+h3.nanum {
+  font-family: "Nanum Myeongjo", serif;
+  font-size: 32px;
   font-weight: 700;
 }
 
@@ -155,8 +163,405 @@ a {
   text-decoration: underline;
 }
 
-/* ##### footer ##### */
+/* ##### main ##### */
 
+#main-visual {
+  height: 740px;
+  background: #000;
+}
+
+#main-visual .container {
+  height: 100%;
+  background-image: url("../images/main-visual-1.png");
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  margin-bottom: 50px;
+}
+
+#main-visual h1 {
+  color: #fff;
+  margin-left: 100px;
+}
+
+/* ##### section1 ##### */
+.section1 .container {
+  display: flex;
+  padding: 50px 20px;
+  justify-content: space-between;
+}
+
+/* 공지사항 */
+.section1 .notice-box {
+  width: calc(50% - 10px);
+  position: relative;
+  padding: 20px;
+}
+
+.section1 .notice-box > ul {
+  border-bottom: 0.3px solid #888;
+  margin-bottom: 10px;
+}
+
+.section1 .notice-box > ul li {
+  display: inline-block;
+  margin-right: 50px;
+  padding-bottom: 5px;
+}
+
+.section1 .notice-box > ul li.active {
+  font-weight: 700;
+  border-bottom: 5px solid var(--main-color);
+}
+
+.section1 .notice-box .btn-plus {
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  color: #888;
+  border: 1px solid #888;
+  background: #fff;
+  position: absolute;
+  top: 5px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.section1 .notice-box .notice-board {
+  font-size: 12px;
+  width: 100%;
+}
+
+.section1 .notice-box .notice-board tr {
+  display: flex;
+  justify-content: space-between;
+}
+
+.section1 .notice-box .notice-board td {
+  padding: 5px 0;
+}
+
+.section1 .notice-box .notice-board button {
+  width: 43px;
+  height: 27px;
+  border: none;
+  background: #d9534f;
+  color: #fff;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.section1 .notice-box .notice-board td a {
+  word-break: break-all;
+}
+
+/* 학사일정 */
+.section1 .schedule-box {
+  width: calc(50% - 10px);
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  box-shadow: 4px 4px 5px #ccc;
+  border-radius: 10px;
+}
+
+.section1 .schedule-box .calendar-box {
+  position: relative;
+  padding: 0 20px;
+  border-right: 0.1px solid #ccc;
+}
+
+.section1 .schedule-box .btn-month {
+  width: 70px;
+  height: 25px;
+  position: absolute;
+  left: calc(50% - (35px));
+  border: none;
+  background: var(--main-color);
+  color: #fff;
+  border-radius: 4px;
+  font-size: 11px;
+}
+
+.section1 .schedule-box .calendar {
+  font-size: 11px;
+  width: 250px;
+  text-align: center;
+  margin-top: 30px;
+  line-height: 23px;
+}
+
+.section1 .schedule-box .schedule-list {
+  width: calc(100% - 311px);
+  font-size: 11px;
+}
+
+.section1 .schedule-box .schedule-list .schedule-date {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.section1 .schedule-box .schedule-list > a {
+  display: block;
+  width: 60px;
+  line-height: 25px;
+  background: var(--main-color);
+  text-align: center;
+  border-radius: 4px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.section1 .schedule-box .schedule-list > ul {
+  font-size: 12px;
+}
+
+/* ##### section2 ##### */
+/* 연습실 예약 */
+.section2 .container {
+  padding: 0px 20px;
+}
+
+.section2 .reservation-banner {
+  width: 100%;
+  display: flex;
+  border: 0.5px solid #ccc;
+}
+
+.section2 .reservation-banner > img {
+  width: 50%;
+}
+
+.section2 .reservation-banner .reservation-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  padding-left: 130px;
+}
+
+.section2 .reservation-banner .reservation-link > p {
+  font-size: 10px;
+  margin-bottom: 15px;
+}
+
+.section2 .reservation-banner .reservation-link > .btn-reservation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  height: 45px;
+  border: 0.5px solid #000;
+  background: #fff;
+  font-weight: 700;
+}
+
+/* ##### section3 ##### */
+/* 전공 안내 */
+
+.section3 .container {
+  padding: 100px 20px 50px;
+}
+
+.section3 .classes {
+  width: 950px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.section3 .classes img {
+  width: 50%;
+}
+
+.section3 .classes .text-box {
+  width: 50%;
+}
+
+.section3 .classes h3 span {
+  font-size: 64px;
+  position: relative;
+  bottom: 10px;
+}
+
+.section3 .classes p {
+  font-family: "Nanum Myeongjo", serif;
+}
+
+/* korean-dance */
+.section3 .classes.korean-dance {
+  left: 228px;
+}
+
+.section3 .korean-dance::before {
+  content: "";
+  width: 453px;
+  height: 453px;
+  background: rgba(0, 102, 64, 0.8);
+  position: absolute;
+  top: 100px;
+  left: -100px;
+  z-index: -1;
+}
+
+.section3 .korean-dance .text-box {
+  text-align: right;
+}
+
+.section3 .korean-dance h3 {
+  position: relative;
+  right: 28px;
+  margin-bottom: 15px;
+}
+
+.section3 .korean-dance h3::before {
+  content: "K";
+  font-family: "crimson text", serif;
+  font-size: 128px;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: -45px;
+  right: 220px;
+}
+
+.section3 .korean-dance h3::after {
+  content: "orean Dance";
+  font-family: "crimson text", serif;
+  font-size: 48px;
+  font-weight: 700;
+  width: 300px;
+  color: rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 30px;
+  right: -35px;
+}
+
+/* modern-dance */
+.section3 .classes.modern-dance {
+  left: 268px;
+}
+
+.section3 .modern-dance::before {
+  content: "";
+  width: 453px;
+  height: 453px;
+  background: #dad6bc;
+  position: absolute;
+  top: 100px;
+  right: -100px;
+  z-index: -1;
+}
+
+.section3 .modern-dance .text-box {
+  text-align: center;
+}
+
+.section3 .modern-dance h3 {
+  position: relative;
+  right: -65px;
+  margin-bottom: 15px;
+}
+
+.section3 .modern-dance h3::before {
+  content: "M";
+  font-family: "crimson text", serif;
+  font-size: 128px;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: -45px;
+  left: -20px;
+}
+
+.section3 .modern-dance h3::after {
+  content: "odern Dance";
+  font-family: "crimson text", serif;
+  font-size: 48px;
+  font-weight: 700;
+  width: 300px;
+  color: rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 30px;
+  left: 72px;
+}
+
+/* ballet */
+.section3 .classes.ballet {
+  left: 128px;
+  margin-top: 100px;
+}
+
+.section3 .ballet::before {
+  content: "";
+  width: 453px;
+  height: 453px;
+  background: #ffdbdd;
+  position: absolute;
+  top: -100px;
+  left: 100px;
+  z-index: -1;
+}
+
+.section3 .ballet .text-box {
+  text-align: center;
+}
+
+.section3 .ballet h3 {
+  position: relative;
+  left: 120px;
+  margin-bottom: 15px;
+}
+
+.section3 .ballet h3::before {
+  content: "B";
+  font-family: "crimson text", serif;
+  font-size: 128px;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: -45px;
+  right: 285px;
+}
+
+.section3 .ballet h3::after {
+  content: "allet";
+  font-family: "crimson text", serif;
+  font-size: 48px;
+  font-weight: 700;
+  width: 300px;
+  color: rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 30px;
+  right: 90px;
+}
+.section3 .ballet p {
+  position: relative;
+  left: 80px;
+}
+
+/* ##### section4 ##### */
+/* 퀵메뉴 */
+.section4 .container {
+  padding: 50px 100px;
+}
+
+.section4 .quick-menu {
+  padding: 60px 170px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 50px;
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.25);
+}
+
+.section4 .quick-menu li {
+  text-align: center;
+}
+
+/* ##### footer ##### */
 #main-footer {
   margin-top: 50px;
 }
