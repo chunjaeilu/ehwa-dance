@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>이화여자대학교 무용과</title>
+    <title>연습실 예약 | 이화여자대학교 무용과</title>
 
     <!-- css style -->
     <link
@@ -17,7 +17,29 @@
       href="../css/sub-mobile.css"
       media="screen and (max-width: 767px)"
     />
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css"
+    />
+    <link href="fullcalendar/main.css" rel="stylesheet" />
+    <script src="fullcalendar/main.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var calendarEl = document.getElementById("calendar");
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+          initialView: "dayGridMonth",
+        });
+        calendar.render();
+      });
+    </script>
   </head>
+
   <body id="sub4-1">
     <!-- header -->
     <header id="main-header">
@@ -77,7 +99,14 @@
     <div class="wrap">
       <!-- lnb -->
       <div class="lnb">
-        <h3><a href="./sub1-1.html">학과소개</a></h3>
+        <h3>
+          <a href="./sub1-1.html"
+            >학과소개<img
+              class="mob-only"
+              src="../images/sub-lnb-2depth-btn.svg"
+              alt="btn-below"
+          /></a>
+        </h3>
         <ul class="lnb-list">
           <li class="active"><a href="./sub1-1.html">학과소개</a></li>
           <li><a href="./sub1-2.html">학과연혁</a></li>
@@ -115,9 +144,14 @@
                 연습실 예약을 할 수 있습니다.
               </h2>
               <img
+                class="line web-only"
                 src="../images/sub-section1-line.png"
                 alt="섹션1 라인"
-                class="line"
+              />
+              <img
+                class="line mob-only"
+                src="../images/sub-section1-line-mob.png"
+                alt="섹션1 라인 모바일"
               />
             </div>
           </div>
@@ -126,16 +160,19 @@
 
         <!-- section2 -->
         <section class="section2">
+          <h2>연습실 예약 안내</h2>
           <p>
             · 이화여자대학교 무용(학)과 이번 학기 등록 학생들은 홈페이지를 통해
             연습실 예약을 할 수 있습니다. <br />
-            · 온라인 예약은 업데이트(매주 금요일 오후)가 완료된 다음 날인“토요일
-            오전 9시”부터 그 다음 주 토요일까지의 공간사용을 예약할 수
-            있습니다.<br />
+            · 온라인 예약은 업데이트(매주 금요일 오후)가 완료된 다음 날인
+            <span class="colorBlue"> “토요일 오전 9시”</span>부터 그 다음 주
+            토요일까지의 공간사용을 예약할 수 있습니다.<br />
             · 학생들은 원하는 시간과 연습실을 선착순으로 선택하여 예약할 수
             있습니다.<br />
-            · 연습실 사용 신청 시 1인당 1주일에 총 2회 신청 가능합니다. · 한
-            타임 당 최대 인원 홀4, 5 : 20명/ 402 : 10명입니다.<br />
+            · 연습실 사용 신청 시
+            <span class="colorBlue"> 1인당 1주일에 총 2회</span> 신청
+            가능합니다.<br />
+            · 한타임 당 최대 인원 홀4, 5 : 20명/ 402 : 10명입니다.<br />
             · 신청단위는 1시간이며, 공연 연습으로 인한 팀 연습 시 2타임까지만
             예약 가능하며, 3타임 연속으로는 예약할 수 없습니다.<br />
             (Ex – A, B, C, D가 한 팀일 때, 1교시 – A 예약, 2교시 – B 예약/ 3교시
@@ -149,25 +186,56 @@
             바랍니다.<br />
             · 홀 마지막 사용자는 홀 퇴실 시 반드시 최종 퇴실자 안전 점검
             리스트를 작성하고 더불어 본인 자필 서명 또한 함께 작성하여 주시기
-            바랍니다. (홀 소등, 난방. 보안 관련 문제로 철저히 지켜주셔야
+            바랍니다. <br />(홀 소등, 난방. 보안 관련 문제로 철저히 지켜주셔야
             합니다.)<br />
             · 매 교시가 시작되기 30분 간 연습실 환기 및 소독을 실시합니다.
             입/퇴실 시간을 정확히 지켜 주시기 바랍니다. <br /><br />
-            ※위 안내 사항 및 예약 수칙 위반 횟수 누적 3회 초과 시, 한 달간 홀
-            예약을 금지합니다.
+            ※위 안내 사항 및 예약 수칙 위반 횟수 누적
+            <span class="colorRed"> 3회</span> 초과 시,
+            <span class="colorRed">한 달간 홀 예약을 금지합니다.</span>
             <br /><br />
-            학과 측에서도 관리, 감독을 수시로 할 예정이지만, 학생들 또한
-            자체적으로 관리 감독할 수 있도록 다음 상황 발생시 학과 사무실에
-            알려주시기 바랍니다.
-            <br />
-            · 사전 허가가 없는 외부인 혹은 졸업생의 홀 사용 시, <br />· 미예약자
-            혹은 댓글 작성 시간이 선착순으로 밀린 학생의 홀 사용 시, <br />· 홀
-            기물파손 및 정리 미비 시
+            <span class="text-light">
+              학과 측에서도 관리, 감독을 수시로 할 예정이지만, 학생들 또한
+              자체적으로 관리 감독할 수 있도록 다음 상황 발생시 학과 사무실에
+              알려주시기 바랍니다.
+              <br />
+              · 사전 허가가 없는 외부인 혹은 졸업생의 홀 사용 시, <br />·
+              미예약자 혹은 댓글 작성 시간이 선착순으로 밀린 학생의 홀 사용 시,
+              <br />· 홀 기물파손 및 정리 미비 시
+            </span>
           </p>
         </section>
         <!-- // section2 -->
+        <section class="section3">
+          <div class="button-style">
+            <button>
+              홀I<br />
+              (체육관 A동)
+            </button>
+            <button>
+              홀IV<br />
+              (체육관 C동 B1)
+            </button>
+            <button>
+              홀V<br />
+              (체육관 C동 B1)
+            </button>
+            <button>
+              홀402호<br />
+              (체육관 B동 F4)
+            </button>
+          </div>
+          <!-- button -->
+        </section>
+        <section class="section4">
+          <div id="calendar"></div>
+        </section>
+        <section class="section5">
+          <img src="../images/예약테이블.jpg" alt="예약테이블" />
+        </section>
       </main>
     </div>
+
     <!-- // .wrap -->
 
     <!-- footer -->
@@ -179,16 +247,18 @@
         </div>
         <div class="address">
           <p>
-            03760 서울특별시 서대문구 이화여대길 52 이화여자대학교
+            03760 서울특별시 서대문구 이화여대길 52
+            <br class="mob-only" />이화여자대학교
             <span class="ft-bold">무용과</span>
           </p>
-          |
+          <span class="web-only">|</span>
           <p>대표전화 : 02-3277-2572</p>
-          |
+          <span class="web-only">|</span>
           <p>이메일 : e600053@ewha.ac.kr</p>
         </div>
         <p class="copy">
-          Copyright ⓒ 2022 Ewha Womans University. All Right Reserved.
+          Copyright ⓒ 2022 Ewha Womans University. <br class="mob-only" />
+          All Right Reserved.
         </p>
       </div>
       <!-- // footer .container-->

@@ -6,6 +6,11 @@
 /* font-family: 'Nanum Myeongjo', serif; */
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap");
 
+/* 미디어쿼리 */
+.mob-only {
+  display: none;
+}
+
 /* 기본 css style */
 :root {
   --main-color: #006640;
@@ -142,11 +147,11 @@ a {
 #gnb .depth1 > li::after {
   content: "";
   width: 0px;
-  height: 2px;
+  height: 3px;
   background: var(--main-color);
   position: absolute;
   left: 0;
-  top: 79px;
+  top: 78px;
   transition: 0.5s;
 }
 #gnb .depth1 > li:hover::after {
@@ -156,14 +161,14 @@ a {
 #gnb .depth1 > li:hover .depth2 {
   height: auto;
   opacity: 1;
-  transition: 0.4s;
+  transition: 0.5s;
 }
 
 #gnb .depth2 > li:hover > a {
   text-decoration: underline;
 }
 
-/* ##### main ##### */
+/* ##### main-visual ##### */
 
 #main-visual {
   height: 740px;
@@ -172,7 +177,7 @@ a {
 
 #main-visual .container {
   height: 100%;
-  background-image: url("../images/main-visual-1.png");
+  background-image: url("../images/main-visual-1.jpg");
   display: flex;
   align-items: center;
   background-size: cover;
@@ -186,6 +191,7 @@ a {
 
 /* ##### section1 ##### */
 .section1 .container {
+  width: 100%;
   display: flex;
   padding: 50px 20px;
   justify-content: space-between;
@@ -198,18 +204,19 @@ a {
   padding: 20px;
 }
 
-.section1 .notice-box > ul {
+.section1 .notice-box .notice-title-list {
   border-bottom: 0.3px solid #888;
   margin-bottom: 10px;
 }
 
-.section1 .notice-box > ul li {
+.section1 .notice-box .notice-title-list li {
   display: inline-block;
-  margin-right: 50px;
-  padding-bottom: 5px;
+  margin-right: 30px;
+  padding: 5px;
+  cursor: pointer;
 }
 
-.section1 .notice-box > ul li.active {
+.section1 .notice-box .notice-title-list li.active {
   font-weight: 700;
   border-bottom: 5px solid var(--main-color);
 }
@@ -227,37 +234,59 @@ a {
   cursor: pointer;
 }
 
-.section1 .notice-box .notice-board {
+.section1 .notice-box .notice-list {
   font-size: 12px;
-  width: 100%;
 }
 
-.section1 .notice-box .notice-board tr {
+.section1 .notice-box .notice-list li {
+  height: 30px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  gap: 10px;
 }
 
-.section1 .notice-box .notice-board td {
-  padding: 5px 0;
+.section1 .notice-box .notice-list li:last-child {
+  margin-bottom: 0px;
 }
 
-.section1 .notice-box .notice-board button {
-  width: 43px;
-  height: 27px;
+.section1 .notice-box .notice-list a {
+  line-height: 30px;
+  font-weight: 400;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.section1 .notice-box .notice-list b {
   border: none;
   background: #d9534f;
   color: #fff;
-  font-weight: bold;
-  margin-right: 10px;
+  margin-right: 5px;
+  padding: 3px 7px;
+  /* border-radius: 5px; */
 }
 
-.section1 .notice-box .notice-board td a {
-  word-break: break-all;
+.section1 .notice-box .notice-list .notice-date {
+  width: 80px;
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* 공지사항 전환 */
+.section1 .notice-list {
+  display: none;
+}
+
+.section1 .notice-list.active {
+  display: block;
 }
 
 /* 학사일정 */
 .section1 .schedule-box {
   width: calc(50% - 10px);
+  min-width: 500px;
   display: flex;
   justify-content: space-between;
   padding: 20px;
@@ -319,6 +348,21 @@ a {
   font-size: 12px;
 }
 
+/* calendar style */
+
+.section1 .calendar .sat {
+  color: #17a1fa;
+}
+
+.section1 .calendar .sun {
+  color: #d9534f;
+}
+
+.section1 .calendar td.choosed {
+  border-radius: 10px;
+  background: rgba(0, 102, 64, 0.2);
+}
+
 /* ##### section2 ##### */
 /* 연습실 예약 */
 .section2 .container {
@@ -367,7 +411,7 @@ a {
 }
 
 .section3 .classes {
-  width: 950px;
+  width: 70%;
   display: flex;
   align-items: center;
   position: relative;
@@ -389,6 +433,7 @@ a {
 
 .section3 .classes p {
   font-family: "Nanum Myeongjo", serif;
+  line-height: 1.5em;
 }
 
 /* korean-dance */
@@ -398,8 +443,8 @@ a {
 
 .section3 .korean-dance::before {
   content: "";
-  width: 453px;
-  height: 453px;
+  width: 50%;
+  height: 100%;
   background: rgba(0, 102, 64, 0.8);
   position: absolute;
   top: 100px;
@@ -447,8 +492,8 @@ a {
 
 .section3 .modern-dance::before {
   content: "";
-  width: 453px;
-  height: 453px;
+  width: 50%;
+  height: 100%;
   background: #dad6bc;
   position: absolute;
   top: 100px;
@@ -497,8 +542,8 @@ a {
 
 .section3 .ballet::before {
   content: "";
-  width: 453px;
-  height: 453px;
+  width: 50%;
+  height: 100%;
   background: #ffdbdd;
   position: absolute;
   top: -100px;
@@ -559,6 +604,20 @@ a {
 
 .section4 .quick-menu li {
   text-align: center;
+}
+
+.section4 .quick-menu li a {
+  width: 100%;
+  height: 100%;
+  color: var(--main-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section4 .quick-menu li p {
+  line-height: 1.2em;
 }
 
 /* ##### footer ##### */

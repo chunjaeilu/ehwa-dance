@@ -351,6 +351,187 @@ main {
   margin-bottom: 15px;
 }
 
+/* sub1-2 */
+/* ##### section1 ##### */
+#sub1-2 .section1 {
+  width: 1000px;
+  padding: 50px 0;
+}
+
+#sub1-2 .section1 .section1-title {
+  display: flex;
+}
+
+#sub1-2 .section1 .sub-main-visual {
+  margin-right: 20px;
+  width: 433px;
+  height: 270px;
+}
+
+#sub1-2 .section1 .sub-main-visual img {
+  /* width: 100%; */
+  object-fit: cover;
+}
+
+#sub1-2 .section1 .textbox {
+  position: relative;
+}
+
+#sub1-2 .section1 h1 {
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+#sub1-2 .section1 h1 .main-color {
+  color: var(--main-color);
+}
+
+#sub1-2 .section1 h1 {
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+#sub1-2 .section1 h2 {
+  color: var(--text-light);
+}
+
+#sub1-2 .section1 .line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
+#sub1-2 .section1 > p {
+  margin-top: 15px;
+}
+
+/* ##### section2 ##### */
+
+#sub1-2 .section2 {
+  padding: 50px 0;
+}
+
+#sub1-2 .section2 .content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+#sub1-2 .section2 .content.left-55 {
+  margin-left: 56px;
+}
+
+#sub1-2 .section2 .content.left-170 {
+  margin-left: 170px;
+}
+
+#sub1-2 .section2 .text-box {
+  width: 440px;
+}
+
+#sub1-2 .section2 .text-box hr {
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+/* 연혁 */
+
+#history .container {
+  width: 100%;
+  padding: 20px;
+}
+
+#history .container > h3 {
+  margin-left: 390px;
+}
+
+#history .container .annual {
+  margin: 50px 50px 50px 390px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#history .container .box2 {
+  width: 50%;
+  /* width: calc((100% - 20px) / 2); */
+  /* outline: 1px solid palevioletred; */
+  display: flex;
+  flex-direction: column;
+  padding: 0px 50px 50px 50px;
+  margin-bottom: 50px;
+}
+
+#history .container > h4 {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 40px;
+  margin-bottom: 50px;
+}
+
+#history .container .box2 > h4 {
+  margin-bottom: 8px;
+}
+
+#history .container .annual .box2 > ul .history-list {
+  margin-left: 25px;
+}
+
+#history .container .annual .box2 > ul li:first-child {
+  width: 100%;
+  display: flex;
+  margin-bottom: 8px;
+}
+
+#history .container .annual .box2 > ul li > img {
+  width: 15px;
+  height: 15px;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+/* ##### sub 1-3 ##### */
+
+/* 교수진 */
+
+#sub1-3 #professor .container {
+  display: flex;
+  justify-content: flex-start;
+  padding: 50px;
+  flex-wrap: wrap;
+}
+
+#sub1-3 #professor .container .profile {
+  padding: 50px;
+  width: 100%;
+  margin-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#sub1-3 #professor .container .profile .profile-box {
+  width: 33.33%;
+  margin-bottom: 50px;
+}
+
+#sub1-3 #professor .container .profile .profile-box > ul {
+  list-style: disc;
+}
+
+#sub1-3 #professor .container .profile .profile-box > ul li:first-child {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+#sub1-3 #professor .container .profile .profile-box > ul li:nth-child(2) {
+  font-size: 20px;
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+#sub1-3 #professor .container .profile .profile-box > ul .profile-list {
+  margin-left: 20px;
+}
+
 /* sub2-1 */
 
 /* ##### section1 ##### */
@@ -412,6 +593,7 @@ main {
 /* sub4-1 */
 /* ##### section1 ##### */
 #sub4-1 .section1 {
+  width: 1000px;
   padding: 50px 0;
 }
 
@@ -452,4 +634,93 @@ main {
   left: 0;
   top: 0;
   z-index: -1;
+}
+
+/* ##### section2 ##### */
+#sub4-1 .section2 h2 {
+  margin-bottom: 30px;
+}
+
+#sub4-1 .section2 p > .colorBlue {
+  color: blue;
+}
+
+#sub4-1 .section2 p > .colorRed {
+  color: red;
+}
+
+#sub4-1 .section2 p > .text-light {
+  color: var(--text-light);
+}
+
+#sub4-1 .section3 {
+  width: 1000px;
+  height: 150px;
+  display: flex;
+  /* outline: 1px solid red; */
+}
+
+#sub4-1 .section3 button {
+  width: 150px;
+  height: 50px;
+  border-radius: 5px;
+  border: 2px solid #006640;
+  background-color: #fff;
+  color: var(--main-color);
+  margin: 50px 25px;
+}
+
+.button-style {
+  position: absolute;
+  left: 125px;
+}
+
+/* sub5-1 */
+/* ##### section1 ##### */
+#sub5-1 .section1 {
+  width: 1000px;
+  padding: 50px 0;
+}
+
+#sub5-1 .section1 .section1-title {
+  display: flex;
+}
+
+#sub5-1 .section1 .sub-main-visual {
+  margin-right: 20px;
+  width: 433px;
+  height: 270px;
+}
+
+#sub5-1 .section1 .sub-main-visual img {
+  /* width: 100%; */
+  object-fit: cover;
+}
+
+#sub5-1 .wrap main .section1 .textbox {
+  position: relative;
+}
+
+#sub5-1 .wrap main .section1 .textbox h3 {
+  margin-top: 10px;
+}
+
+#sub5-1 .wrap main .section1 .textbox p {
+  margin-top: 10px;
+}
+
+#sub5-1 .wrap main .section1 .textbox .margin15 {
+  margin-top: 15px;
+}
+
+#sub5-1 .wrap main .section1 .line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
+#sub5-1 .wrap main .section1 .textbox .NotoSansKR-28px-main-color {
+  font-size: 28px;
+  color: var(--main-color);
 }

@@ -17,6 +17,9 @@
       href="./css/mobile.css"
       media="screen and (max-width: 767px)"
     />
+    <!-- css style -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="./js/main.js"></script>
   </head>
   <body>
     <!-- header -->
@@ -79,7 +82,8 @@
         <h1>
           이화여자대학교 무용과<br />
           <span class="crimson"
-            >Ewha Womans University Department of Dance</span
+            >Ewha Womans University <br class="mob-only" />
+            Department of Dance</span
           >
         </h1>
       </div>
@@ -89,54 +93,100 @@
     <section class="section1">
       <div class="container">
         <div class="notice-box">
-          <ul>
+          <ul class="notice-title-list">
             <li class="active">공지사항</li>
             <li>학과행사</li>
             <li>외부행사</li>
           </ul>
           <a href="./pages/sub3-1.html"><button class="btn-plus">+</button></a>
-          <table class="notice-board">
-            <tr>
-              <td>
-                <button>공지</button>
+          <div class="notice-board">
+            <ul class="notice-list active">
+              <li>
                 <a href="#"
-                  >[대학원] 2022-2학기 대학원 각 학위과정 영어시험 합격자 명단
-                  제출 안내 (11.15 수정)</a
+                  ><b>공지</b>[대학원] 2022-2학기 대학원 각 학위과정 영어시험
+                  합격자 명단 제출 안내 (11.15 수정)</a
                 >
-              </td>
-              <td class="board-date">2022-11-15</td>
-            </tr>
-            <tr>
-              <td>
-                <button>공지</button>
+                <span class="notice-date">2022-11-15</span>
+              </li>
+              <li>
                 <a href="#"
-                  >[학부] 2022학년도 전기(2023년 2월) 명예졸업 실시 안내</a
+                  ><b>공지</b>[학부] 2022학년도 전기(2023년 2월) 명예졸업 실시
+                  안내</a
                 >
-              </td>
-              <td class="board-date">2022-11-15</td>
-            </tr>
-
-            <tr>
-              <td>
-                <button>공지</button>
+                <span class="notice-date">2022-11-15</span>
+              </li>
+              <li>
                 <a href="#"
-                  >[학부][대학원] ⌜G Suite 사용자 저장용량 정리 안내⌟ 요청</a
+                  ><b>공지</b>[학부][대학원] 이화여자대학교 무용학연구소 제 21회
+                  특강 안내 (11.15 수정)</a
                 >
-              </td>
-              <td class="board-date">2022-11-15</td>
-            </tr>
-
-            <tr>
-              <td>
-                <button>공지</button>
+                <span class="notice-date">2022-11-15</span>
+              </li>
+              <li>
                 <a href="#"
-                  >[학부][대학원] 이화여자대학교 무용학연구소 제 21회 특강
-                  안내(11.15 수정)</a
+                  ><b>공지</b>[학부][대학원] ⌜G Suite 사용자 저장용량 정리 안내⌟
+                  요청</a
                 >
-              </td>
-              <td class="board-date">2022-11-15</td>
-            </tr>
-          </table>
+                <span class="notice-date">2022-11-15</span>
+              </li>
+            </ul>
+            <ul class="notice-list">
+              <li>
+                <a href="#"
+                  ><b>학과</b>[학부][대학원] 2022년 2학기 기말고사 세부일정
+                  안내</a
+                >
+                <span class="notice-date">2022-11-20</span>
+              </li>
+              <li>
+                <a href="#"
+                  ><b>학과</b>[학부] 2022년 2학기 졸업발표회 및 학년별 월례회
+                  세부일정 안내</a
+                >
+                <span class="notice-date">2022-09-24</span>
+              </li>
+              <li>
+                <a href="#"
+                  ><b>학과</b>[학부][대학원] 2022 동아리축제 참가 동아리 및 학과
+                  소모임 모집 안내</a
+                >
+                <span class="notice-date">2022-09-24</span>
+              </li>
+              <li>
+                <a href="#"
+                  ><b>학과</b>[학부][대학원] 2022 2학기 중간고사 세부일정
+                  안내</a
+                >
+                <span class="notice-date">2022-09-10</span>
+              </li>
+            </ul>
+            <ul class="notice-list">
+              <li>
+                <a href="#"
+                  ><b>외부</b>2022 제3회〈ㅊㅊ-하다 페스티벌〉전통공연예술축제
+                  홍보 및 모집 안내</a
+                >
+                <span class="notice-date">2022-10-27</span>
+              </li>
+              <li>
+                <a href="#"
+                  ><b>외부</b>서울시 국악관현악단 & 류장현의 협업「다시갑시다」
+                  공연, 조기예매 할인 안내</a
+                >
+                <span class="notice-date">2022-10-25</span>
+              </li>
+              <li>
+                <a href="#"><b>외부</b>대한무용협회_4마리 백조 페스티벌 홍보</a>
+                <span class="notice-date">2022-10-21</span>
+              </li>
+              <li>
+                <a href="#"
+                  ><b>외부</b>(사)한국민족춤협회 2022 젊은춤 축전 개최 안내</a
+                >
+                <span class="notice-date">2022-09-06</span>
+              </li>
+            </ul>
+          </div>
         </div>
         <!-- // notice-box -->
         <!-- schedule-box -->
@@ -145,63 +195,63 @@
             <button class="btn-month">November</button>
             <table class="calendar">
               <tr>
-                <td>Su</td>
+                <td class="sun">Su</td>
                 <td>Mo</td>
                 <td>Tu</td>
                 <td>We</td>
                 <td>Th</td>
                 <td>Fr</td>
-                <td>Sa</td>
+                <td class="sat">Sa</td>
               </tr>
 
               <tr>
-                <td></td>
+                <td class="sun"></td>
                 <td></td>
                 <td>1</td>
                 <td>2</td>
                 <td>3</td>
                 <td>4</td>
-                <td>5</td>
+                <td class="sat">5</td>
               </tr>
 
               <tr>
-                <td>6</td>
+                <td class="sun">6</td>
                 <td>7</td>
                 <td>8</td>
                 <td>9</td>
                 <td>10</td>
                 <td>11</td>
-                <td>12</td>
+                <td class="sat">12</td>
               </tr>
 
               <tr>
-                <td>13</td>
+                <td class="sun">13</td>
                 <td>14</td>
                 <td>15</td>
                 <td>16</td>
-                <td>17</td>
+                <td class="choosed">17</td>
                 <td>18</td>
-                <td>19</td>
+                <td class="sat">19</td>
               </tr>
 
               <tr>
-                <td>20</td>
+                <td class="sun">20</td>
                 <td>21</td>
                 <td>22</td>
                 <td>23</td>
                 <td>24</td>
                 <td>25</td>
-                <td>26</td>
+                <td class="sat">26</td>
               </tr>
 
               <tr>
-                <td>27</td>
+                <td class="sun">27</td>
                 <td>28</td>
                 <td>29</td>
                 <td>30</td>
                 <td></td>
                 <td></td>
-                <td></td>
+                <td class="sat"></td>
               </tr>
             </table>
           </div>
@@ -233,16 +283,35 @@
     <section class="section2">
       <div class="container">
         <div class="reservation-banner">
-          <img src="./images/main-banner.jpg" alt="예약하기 배너" />
+          <img
+            class="web-only"
+            src="./images/main-banner.jpg"
+            alt="예약하기 배너"
+          />
+          <img
+            class="mob-only"
+            src="./images/main-banner-mob.jpg"
+            alt="연습실 예약"
+          />
           <div class="reservation-link">
             <h2 class="crimson">Reservation</h2>
             <p>
-              이화여자대학교 무용(학)과 이번 학기 등록 학생들은 홈페이지를 통해
-              연습실 예약을 할 수 있습니다.
+              이화여자대학교 무용(학)과 이번 학기 등록 학생들은
+              <br class="mob-only" />
+              홈페이지를 통해 연습실 예약을 할 수 있습니다.
             </p>
             <a href="./pages/sub4-1.html" class="btn-reservation">
               연습실 예약하기
-              <img src="./images/icon-arrow.svg" alt="연습실 예약하기" />
+              <img
+                class="web-only"
+                src="./images/icon-arrow.svg"
+                alt="연습실 예약하기"
+              />
+              <img
+                class="mob-only"
+                src="./images/icon-arrow-white.svg"
+                alt="연습실 예약하기"
+              />
             </a>
           </div>
         </div>
@@ -291,7 +360,10 @@
                 src="./images/main-quick-menu-icon-1.png"
                 alt="이화포탈정보시스템"
               />
-              <p>이화포탈정보시스템</p>
+              <p>
+                이화포탈 <br />
+                정보시스템
+              </p>
             </a>
           </li>
           <li>
@@ -315,7 +387,7 @@
                 src="./images/main-quick-menu-icon-4.png"
                 alt="이화여자대학교 무용학연구소"
               />
-              <p>이화여자대학교 무용학연구소</p>
+              <p>이화여자대학교<br />무용학연구소</p>
             </a>
           </li>
         </ul>
@@ -330,16 +402,18 @@
         </div>
         <div class="address">
           <p>
-            03760 서울특별시 서대문구 이화여대길 52 이화여자대학교
+            03760 서울특별시 서대문구 이화여대길 52
+            <br class="mob-only" />이화여자대학교
             <span class="ft-bold">무용과</span>
           </p>
-          |
+          <span class="web-only">|</span>
           <p>대표전화 : 02-3277-2572</p>
-          |
+          <span class="web-only">|</span>
           <p>이메일 : e600053@ewha.ac.kr</p>
         </div>
         <p class="copy">
-          Copyright ⓒ 2022 Ewha Womans University. All Right Reserved.
+          Copyright ⓒ 2022 Ewha Womans University. <br class="mob-only" />
+          All Right Reserved.
         </p>
       </div>
       <!-- // footer .container-->
