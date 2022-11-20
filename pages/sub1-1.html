@@ -17,6 +17,11 @@
       href="../css/sub-mobile.css"
       media="screen and (max-width: 767px)"
     />
+
+    <!-- script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <script src="../js/sub.js"></script>
   </head>
 
   <body id="sub1-1">
@@ -68,12 +73,69 @@
           </ul>
         </nav>
         <!-- 토글버튼 -->
-        <div class="btn-toggle">
+        <div id="btn-toggle">
           <img src="../images/toggle-site-map.svg" alt="toggle sitemap" />
         </div>
       </div>
       <!-- // header .container -->
     </header>
+
+    <!-- site-map -->
+    <div id="site-map">
+      <div class="container">
+        <div class="header-cover">
+          <h1>
+            <a href="../index.html"
+              ><img src="../images/logo.png" alt="로고"
+            /></a>
+          </h1>
+          <button class="btn-close">
+            <img src="../images/close.svg" alt="닫기" />
+          </button>
+        </div>
+        <nav class="site-map-menu">
+          <ul class="depth1">
+            <li>
+              <a href="./sub1-1.html">학과소개</a>
+              <ul class="depth2">
+                <li><a href="./sub1-1.html">학과소개</a></li>
+                <li><a href="./sub1-2.html">학과연혁</a></li>
+                <li><a href="./sub1-3.html">교수진</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="./sub2-1.html">교과과정</a>
+              <ul class="depth2">
+                <li><a href="./sub2-1.html">교과과정</a></li>
+                <li><a href="./sub2-2.html">전공안내</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="./sub3-1.html">공지사항</a>
+              <ul class="depth2">
+                <li><a href="./sub3-1.html">공지사항</a></li>
+                <li><a href="./sub3-2.html">학과행사</a></li>
+                <li><a href="./sub3-3.html">외부행사</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="./sub4-1.html">연습실 예약</a>
+              <ul class="depth2">
+                <li><a href="./sub4-1.html">연습실 예약</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="sub5-1.html">오시는 길</a>
+              <ul class="depth2">
+                <li><a href="sub5-1.html">오시는 길</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <!-- // site-map -->
     <!-- wrap -->
     <div class="wrap">
       <!-- lnb -->
@@ -141,14 +203,11 @@
             </div>
           </div>
           <p>
-            1963년, 이화의 기독교 정신과 진취적인 여성 교육관,
-            <br class="mob-only" />그리고 (故)박외선 교수의 무용에 대한 사랑과
-            열정을 바탕으로 <br />
-            대한민국 대학교 사상 첫 무용과가 설립되었습니다.
-            <br class="mob-only" />이화여자대학교 무용학과는 유능한 교육자,
-            예술가, 이론가를 <br class="mob-only" />양성하여
-            <br class="web-only" />
-            우리나라 무용예술과 학문적 발전에 기여합니다.
+            1963년, 이화의 기독교 정신과 진취적인 여성 교육관, 그리고 (故)박외선
+            교수의 무용에 대한 사랑과 열정을 바탕으로 대한민국 대학교 사상 첫
+            무용과가 설립되었습니다. 이화여자대학교 무용학과는 유능한 교육자,
+            예술가, 이론가를 양성하여 우리나라 무용예술과 학문적 발전에
+            기여합니다.
           </p>
         </section>
         <!-- // section1 -->
@@ -162,9 +221,9 @@
               <hr />
               <p>
                 무용 실기 및 이론을 토대로 창의력 넘치는 전문 예술가와
-                무용학자로서 <br />무용계를 주도해 갈 인재 양성을 목적으로 무용
-                실기와 이론의 유기적 <br />수업 방식을 통해 전공에 따른 학생
-                개개인의 소양에 맞도록 지도합니다.
+                무용학자로서 무용계를 주도해 갈 인재 양성을 목적으로 무용 실기와
+                이론의 유기적수업 방식을 통해 전공에 따른 학생 개개인의 소양에
+                맞도록 지도합니다.
               </p>
             </div>
           </div>
@@ -173,12 +232,12 @@
               <h4>교육내용</h4>
               <hr />
               <p>
-                다양한 실기교육을 통해 테크닉 수준별 심화 교육과 <br />무용
-                이론교과목을 제공하고 있습니다. <br />월례발표회를 통해 안무
-                창작 능력 및 무대 제작 과정의 경험을 넓히고, <br />국제 교환
-                프로그램을 통해 국제적·창의적 안목과 창조, <br />안무 능력을
-                고취시키며, 급변 하는 사회의 문화적 흐름을 반영하는 <br />미래
-                무용예술의 방향을 제시하는 통합적 비전을 제공합니다.
+                다양한 실기교육을 통해 테크닉 수준별 심화 교육과 무용
+                이론교과목을 제공하고 있습니다. 월례발표회를 통해 안무 창작 능력
+                및 무대 제작 과정의 경험을 넓히고, 국제 교환 프로그램을 통해
+                국제적·창의적 안목과 창조, 안무 능력을 고취시키며, 급변 하는
+                사회의 문화적 흐름을 반영하는 미래 무용예술의 방향을 제시하는
+                통합적 비전을 제공합니다.
               </p>
             </div>
             <img src="../images/sub-1-section-icon-2.png" alt="curriculum" />
@@ -190,15 +249,11 @@
               <hr />
               <p>
                 졸업생들은 크게 교육계(학교교육, 전문교육, 사회교육, 학원교육)와
-                <br />
                 예술계(직업단체, 연구단 체) 등 사회의 다방면으로 진출하고
-                있습니다. <br />
-                최근에는 무용이론가, 교육가, 평론가, 전문가(안무, 실기)이외에도
-                <br />
-                사회무용교육이 활성화되어 대학 내 사회교육원이나
-                지역문화센터로의 취업 기회의 폭이 확대되었습니다. <br />
-                국제 문화 교류 및 정보 교환을 통해 국제 무대로의 진출도
-                가능합니다.
+                있습니다. 최근에는 무용이론가, 교육가, 평론가, 전문가(안무,
+                실기)이외에도 사회무용교육이 활성화되어 대학 내 사회교육원이나
+                지역문화센터로의 취업 기회의 폭이 확대되었습니다. 국제 문화 교류
+                및 정보 교환을 통해 국제 무대로의 진출도 가능합니다.
               </p>
             </div>
           </div>
@@ -208,16 +263,17 @@
               <hr />
               <p>
                 무용학 연구소는 무용예술의 제반 영역인 학술 연구, 공연과 기획,
-                <br />
                 예술 경영, 무용 교육 활동과 프로그램 연구, 춤 문화 콘텐츠 기획
-                등 <br />
-                다양한 사업의 추진을 목적으로 설립되었으며, <br />
-                통합적인 예술로서 무용학의 학문적 방향 제시, 무용을 통한 창의력
-                <br />
-                함양의 교육, 한국의 춤 역사와 무용 문화 콘텐츠 개발을 위한
-                <br />
-                지원 사업에 기여하고 있습니다.
+                등 다양한 사업의 추진을 목적으로 설립되었으며, 통합적인 예술로서
+                무용학의 학문적 방향 제시, 무용을 통한 창의력 함양의 교육,
+                한국의 춤 역사와 무용 문화 콘텐츠 개발을 위한 지원 사업에
+                기여하고 있습니다.
               </p>
+              <a class="btn-link" href="#"
+                >바로가기<img
+                  src="../images/sub1-1-btn-link.svg"
+                  alt="바로가기"
+              /></a>
             </div>
             <img src="../images/sub-1-section-icon-4.png" alt="research" />
           </div>

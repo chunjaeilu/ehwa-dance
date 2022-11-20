@@ -161,6 +161,82 @@ a {
   text-decoration: underline;
 }
 
+/* ##### 사이트맵 ##### */
+
+#site-map {
+  position: absolute;
+  width: 100%;
+  height: 800px;
+  z-index: 9999;
+  top: 0;
+}
+
+#site-map .container {
+  position: relative;
+  max-width: 1440px;
+  background-image: url(../images/sitemap-bg.jpg);
+  background-repeat: no-repeat;
+  height: 100%;
+  box-shadow: 4px 4px 5px #ccc;
+}
+
+#site-map .header-cover {
+  width: 100%;
+  height: 80px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#site-map .header-cover .btn-close {
+  border: none;
+  background: none;
+}
+
+#site-map .site-map-menu {
+  padding: 100px 200px;
+  height: calc(100% - 80px);
+}
+
+#site-map .site-map-menu .depth1 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: space-around;
+}
+
+#site-map .site-map-menu .depth1 > li {
+  width: 30%;
+}
+
+#site-map .site-map-menu .depth1 > li > a {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 60px;
+}
+
+#site-map .site-map-menu .depth2 > li > a {
+  font-size: 15px;
+  color: #444444;
+  line-height: 30px;
+}
+
+/* 사이트맵 전환 효과 */
+#site-map {
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: 0.5s;
+}
+#site-map.show {
+  height: 800px;
+  overflow: visible;
+  opacity: 1;
+}
+
 /* ##### wrap ##### */
 /* 본문 전체 */
 .wrap {
@@ -276,6 +352,7 @@ main {
 /* sub1-1 */
 /* ##### section1 ##### */
 #sub1-1 .section1 {
+  width: 1000px;
   padding: 50px 0;
 }
 
@@ -320,6 +397,7 @@ main {
 
 #sub1-1 .section1 > p {
   margin-top: 15px;
+  word-break: keep-all;
 }
 
 /* ##### section2 ##### */
@@ -351,10 +429,33 @@ main {
   margin-bottom: 15px;
 }
 
+#sub1-1 .section2 .text-box p {
+  word-break: keep-all;
+}
+
+#sub1-1 .section2 .text-box .btn-link {
+  width: 115px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 10px;
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px #ccc;
+  outline: 0.1px solid #ccc;
+}
+
+#sub1-1 .section2 .text-box .btn-link img {
+  width: 20px;
+}
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::: */
+
 /* sub1-2 */
-/* ##### section1 ##### */
+/* ##### sub1-2 section1 ##### */
+
 #sub1-2 .section1 {
-  width: 1000px;
   padding: 50px 0;
 }
 
@@ -386,11 +487,6 @@ main {
   color: var(--main-color);
 }
 
-#sub1-2 .section1 h1 {
-  margin-top: 15px;
-  margin-bottom: 20px;
-}
-
 #sub1-2 .section1 h2 {
   color: var(--text-light);
 }
@@ -406,53 +502,21 @@ main {
   margin-top: 15px;
 }
 
-/* ##### section2 ##### */
+/* ##### sub1-2 section2 ##### */
 
-#sub1-2 .section2 {
-  padding: 50px 0;
+/* 학과 연혁 */
+
+#sub1-2 #history > h3 {
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
-#sub1-2 .section2 .content {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-}
-
-#sub1-2 .section2 .content.left-55 {
-  margin-left: 56px;
-}
-
-#sub1-2 .section2 .content.left-170 {
-  margin-left: 170px;
-}
-
-#sub1-2 .section2 .text-box {
-  width: 440px;
-}
-
-#sub1-2 .section2 .text-box hr {
-  margin-top: 5px;
-  margin-bottom: 15px;
-}
-
-/* 연혁 */
-
-#history .container {
-  width: 100%;
-  padding: 20px;
-}
-
-#history .container > h3 {
-  margin-left: 390px;
-}
-
-#history .container .annual {
-  margin: 50px 50px 50px 390px;
+#history .annual {
   display: flex;
   flex-wrap: wrap;
 }
 
-#history .container .box2 {
+#sub1-2 #history .box2 {
   width: 50%;
   /* width: calc((100% - 20px) / 2); */
   /* outline: 1px solid palevioletred; */
@@ -462,75 +526,140 @@ main {
   margin-bottom: 50px;
 }
 
-#history .container > h4 {
+#sub1-2 #history > h4 {
   font-family: "Noto Sans KR", sans-serif;
   font-size: 40px;
   margin-bottom: 50px;
 }
 
-#history .container .box2 > h4 {
+#sub1-2 #history .box2 > h4 {
   margin-bottom: 8px;
 }
 
-#history .container .annual .box2 > ul .history-list {
+#sub1-2 #history .annual .box2 > ul .history-list {
   margin-left: 25px;
 }
 
-#history .container .annual .box2 > ul li:first-child {
+#sub1-2 #history .annual .box2 > ul li:first-child {
   width: 100%;
   display: flex;
   margin-bottom: 8px;
 }
 
-#history .container .annual .box2 > ul li > img {
+#sub1-2 #history .annual .box2 > ul li > img {
   width: 15px;
   height: 15px;
   margin-top: 10px;
   margin-right: 10px;
 }
 
-/* ##### sub 1-3 ##### */
+/* ::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+/* sub1-3 */
+
+/* ##### sub1-3 section1 ##### */
+
+#sub1-3 .section1 {
+  padding: 50px 0;
+}
+
+#sub1-3 .section1 .section1-title {
+  display: flex;
+}
+
+#sub1-3 .section1 .sub-main-visual {
+  margin-right: 20px;
+  width: 433px;
+  height: 270px;
+}
+
+#sub1-3 .section1 .sub-main-visual img {
+  /* width: 100%; */
+  object-fit: cover;
+}
+
+#sub1-3 .section1 .textbox {
+  position: relative;
+}
+
+#sub1-3 .section1 h1 {
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+#sub1-3 .section1 h1 .main-color {
+  color: var(--main-color);
+}
+
+#sub1-3 .section1 h2 {
+  color: var(--text-light);
+}
+
+#sub1-3 .section1 .line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
+#sub1-3 .section1 > p {
+  margin-top: 15px;
+}
+
+/* ##### sub1-3 section2 ##### */
 
 /* 교수진 */
 
-#sub1-3 #professor .container {
-  display: flex;
-  justify-content: flex-start;
-  padding: 50px;
-  flex-wrap: wrap;
+#sub1-3 #professor h4 {
+  margin-bottom: 50px;
 }
 
-#sub1-3 #professor .container .profile {
-  padding: 50px;
+#sub1-3 #professor .profile {
   width: 100%;
   margin-bottom: 50px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-#sub1-3 #professor .container .profile .profile-box {
-  width: 33.33%;
+#sub1-3 #professor .profile .profile-box {
+  width: calc((100% - 20px) / 2);
+  outline: 0.3px solid #444;
+  box-shadow: 5px 5px #006640;
   margin-bottom: 50px;
+  display: flex;
+  align-items: center;
 }
 
-#sub1-3 #professor .container .profile .profile-box > ul {
+#sub1-3 #professor .profile .profile-box > ul {
   list-style: disc;
-}
-
-#sub1-3 #professor .container .profile .profile-box > ul li:first-child {
-  list-style: none;
-  margin-bottom: 10px;
-}
-
-#sub1-3 #professor .container .profile .profile-box > ul li:nth-child(2) {
-  font-size: 20px;
-  list-style: none;
-  margin-bottom: 10px;
-}
-
-#sub1-3 #professor .container .profile .profile-box > ul .profile-list {
   margin-left: 20px;
 }
+
+#sub1-3 #professor .profile .profile-box > .profile-img {
+  padding: 10px;
+}
+
+#sub1-3 #professor .profile .profile-box > ul li:first-child {
+  list-style: none;
+  margin-bottom: 10px;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+#sub1-3 #professor .profile .profile-box > ul li:last-child {
+  list-style: none;
+}
+
+#sub1-3 #professor .profile .profile-box > ul .profile-list {
+  margin-left: 20px;
+}
+
+#sub1-3 #professor .profile .profile-box > ul p {
+  margin-top: 20px;
+}
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::: */
 
 /* sub2-1 */
 
@@ -590,6 +719,8 @@ main {
   width: 100%;
 }
 
+/* ::::::::::::::::::::::::::::::::::::::::::::::::: */
+
 /* sub4-1 */
 /* ##### section1 ##### */
 #sub4-1 .section1 {
@@ -637,7 +768,7 @@ main {
 }
 
 /* ##### section2 ##### */
-#sub4-1 .section2 h2 {
+#sub4-1 .section2 h3 {
   margin-bottom: 30px;
 }
 
@@ -660,20 +791,31 @@ main {
   /* outline: 1px solid red; */
 }
 
+.button-style {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 50px;
+}
+
 #sub4-1 .section3 button {
   width: 150px;
   height: 50px;
-  border-radius: 5px;
+  border-radius: 15px;
   border: 2px solid #006640;
   background-color: #fff;
   color: var(--main-color);
-  margin: 50px 25px;
 }
 
-.button-style {
-  position: absolute;
-  left: 125px;
+#sub4-1 .section3 button.active {
+  border: 2px solid var(--main-color);
+  background-color: var(--main-color);
+  color: #fff;
+  box-shadow: 3px 3px 3px #ccc;
 }
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::: */
 
 /* sub5-1 */
 /* ##### section1 ##### */
@@ -697,30 +839,23 @@ main {
   object-fit: cover;
 }
 
-#sub5-1 .wrap main .section1 .textbox {
+#sub5-1 .section1 .textbox {
   position: relative;
 }
 
-#sub5-1 .wrap main .section1 .textbox h3 {
+#sub5-1 .section1 .textbox h3 {
+  font-size: 24px;
   margin-top: 10px;
+  color: var(--main-color);
 }
 
 #sub5-1 .wrap main .section1 .textbox p {
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
-#sub5-1 .wrap main .section1 .textbox .margin15 {
-  margin-top: 15px;
-}
-
-#sub5-1 .wrap main .section1 .line {
+#sub5-1 .section1 .line {
   position: absolute;
   left: 0;
   top: 0;
   z-index: -1;
-}
-
-#sub5-1 .wrap main .section1 .textbox .NotoSansKR-28px-main-color {
-  font-size: 28px;
-  color: var(--main-color);
 }

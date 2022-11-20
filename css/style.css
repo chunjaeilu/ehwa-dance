@@ -168,6 +168,82 @@ a {
   text-decoration: underline;
 }
 
+/* ##### site-map ##### */
+
+#site-map {
+  position: absolute;
+  width: 100%;
+  height: 800px;
+  z-index: 9999;
+  top: 0;
+}
+
+#site-map .container {
+  position: relative;
+  max-width: 1440px;
+  background-image: url(../images/sitemap-bg.jpg);
+  background-repeat: no-repeat;
+  height: 100%;
+  box-shadow: 4px 4px 5px #ccc;
+}
+
+#site-map .header-cover {
+  width: 100%;
+  height: 80px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#site-map .header-cover .btn-close {
+  border: none;
+  background: none;
+}
+
+#site-map .site-map-menu {
+  padding: 100px 200px;
+  height: calc(100% - 80px);
+}
+
+#site-map .site-map-menu .depth1 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: space-around;
+}
+
+#site-map .site-map-menu .depth1 > li {
+  width: 30%;
+}
+
+#site-map .site-map-menu .depth1 > li > a {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 60px;
+}
+
+#site-map .site-map-menu .depth2 > li > a {
+  font-size: 15px;
+  color: #444444;
+  line-height: 30px;
+}
+
+/* 사이트맵 전환 효과 */
+#site-map {
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: 0.5s;
+}
+#site-map.show {
+  height: 800px;
+  overflow: visible;
+  opacity: 1;
+}
+
 /* ##### main-visual ##### */
 
 #main-visual {
@@ -182,6 +258,7 @@ a {
   align-items: center;
   background-size: cover;
   margin-bottom: 50px;
+  transition: 1.5s;
 }
 
 #main-visual h1 {
@@ -229,7 +306,7 @@ a {
   border: 1px solid #888;
   background: #fff;
   position: absolute;
-  top: 5px;
+  top: 10px;
   right: 20px;
   cursor: pointer;
 }
@@ -283,7 +360,7 @@ a {
   display: block;
 }
 
-/* 학사일정 */
+/* 학사일정-달력 */
 .section1 .schedule-box {
   width: calc(50% - 10px);
   min-width: 500px;
@@ -320,6 +397,21 @@ a {
   line-height: 23px;
 }
 
+.section1 .schedule-box .calendar th,
+td {
+  width: calc(100% / 7);
+}
+
+.section1 .schedule-box .calendar th {
+  font-weight: 400;
+}
+
+.section1 .schedule-box .calendar td {
+  cursor: pointer;
+  position: relative;
+}
+
+/* 학사일정-세부일정 */
 .section1 .schedule-box .schedule-list {
   width: calc(100% - 311px);
   font-size: 11px;
@@ -331,6 +423,11 @@ a {
   align-items: center;
   justify-content: center;
   gap: 20px;
+}
+
+.section1 .schedule-box .schedule-list .schedule-date button {
+  background: none;
+  border: none;
 }
 
 .section1 .schedule-box .schedule-list > a {
@@ -361,6 +458,15 @@ a {
 .section1 .calendar td.choosed {
   border-radius: 10px;
   background: rgba(0, 102, 64, 0.2);
+}
+
+.section1 .calendar td.something::after {
+  content: "·";
+  font-size: 20px;
+  color: var(--main-color);
+  position: absolute;
+  top: 9px;
+  left: 14px;
 }
 
 /* ##### section2 ##### */

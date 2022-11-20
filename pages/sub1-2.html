@@ -17,6 +17,11 @@
       href="../css/sub-mobile.css"
       media="screen and (max-width: 767px)"
     />
+
+    <!-- script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <script src="../js/sub.js"></script>
   </head>
 
   <body id="sub1-2">
@@ -68,12 +73,70 @@
           </ul>
         </nav>
         <!-- 토글버튼 -->
-        <div class="btn-toggle">
+        <div id="btn-toggle">
           <img src="../images/toggle-site-map.svg" alt="toggle sitemap" />
         </div>
       </div>
       <!-- // header .container -->
     </header>
+
+    <!-- site-map -->
+    <div id="site-map">
+      <div class="container">
+        <div class="header-cover">
+          <h1>
+            <a href="../index.html"
+              ><img src="../images/logo.png" alt="로고"
+            /></a>
+          </h1>
+          <button class="btn-close">
+            <img src="../images/close.svg" alt="닫기" />
+          </button>
+        </div>
+        <nav class="site-map-menu">
+          <ul class="depth1">
+            <li>
+              <a href="./sub1-1.html">학과소개</a>
+              <ul class="depth2">
+                <li><a href="./sub1-1.html">학과소개</a></li>
+                <li><a href="./sub1-2.html">학과연혁</a></li>
+                <li><a href="./sub1-3.html">교수진</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="./sub2-1.html">교과과정</a>
+              <ul class="depth2">
+                <li><a href="./sub2-1.html">교과과정</a></li>
+                <li><a href="./sub2-2.html">전공안내</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="./sub3-1.html">공지사항</a>
+              <ul class="depth2">
+                <li><a href="./sub3-1.html">공지사항</a></li>
+                <li><a href="./sub3-2.html">학과행사</a></li>
+                <li><a href="./sub3-3.html">외부행사</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="./sub4-1.html">연습실 예약</a>
+              <ul class="depth2">
+                <li><a href="./sub4-1.html">연습실 예약</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="sub5-1.html">오시는 길</a>
+              <ul class="depth2">
+                <li><a href="sub5-1.html">오시는 길</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <!-- // site-map -->
+
     <!-- wrap -->
     <div class="wrap">
       <!-- lnb -->
@@ -125,14 +188,9 @@
               </h1>
               <h2>이화 무용, 새 날을 열다.</h2>
               <img
-                class="line web-only"
                 src="../images/sub-section1-line.png"
                 alt="섹션1 라인"
-              />
-              <img
-                class="line mob-only"
-                src="../images/sub-section1-line-mob.svg"
-                alt="섹션1 라인 모바일"
+                class="line"
               />
             </div>
           </div>
@@ -148,180 +206,180 @@
           </p>
         </section>
         <!-- // section1 -->
+
+        <!-- 연혁 -->
+        <section id="history">
+          <h3>학과연혁</h3>
+          <div class="annual">
+            <div class="box2">
+              <ul>
+                <li>
+                  <img
+                    src="../images/sub-1-2-section-icon.png"
+                    alt="연혁 아이콘"
+                  />
+                  <h4>2013.</h4>
+                </li>
+                <li class="history-list">문화예술교육사 교육기관 선정</li>
+                <li class="history-list">
+                  문화예술교육사 2급 자격증 강의 개설
+                </li>
+              </ul>
+            </div>
+
+            <div class="box2">
+              <ul>
+                <li>
+                  <img
+                    src="../images/sub-1-2-section-icon.png"
+                    alt="연혁 아이콘"
+                  />
+                  <h4>2012.</h4>
+                </li>
+                <li class="history-list">국내 최초 무용학연구소 설립</li>
+              </ul>
+            </div>
+
+            <div class="box2">
+              <ul>
+                <li>
+                  <img
+                    src="../images/sub-1-2-section-icon.png"
+                    alt="연혁 아이콘"
+                  />
+                  <h4>2009.</h4>
+                </li>
+                <li class="history-list">
+                  예술대학에서 음악대학 소속으로 편제 개편
+                </li>
+                <li class="history-list">
+                  공연예술대학원 설립 및 무용공연지도전공 신설
+                </li>
+              </ul>
+            </div>
+
+            <div class="box2">
+              <ul>
+                <li>
+                  <img
+                    src="../images/sub-1-2-section-icon.png"
+                    alt="연혁 아이콘"
+                  />
+                  <h4>2008.</h4>
+                </li>
+                <li class="history-list">대학원 실기석박 세제도 도입</li>
+                <li class="history-list">
+                  세계 최초 무용학 실기박사학위 과정 개설
+                </li>
+                <li class="history-list">수여학위명</li>
+                <li class="history-list">무용석사(M.F.A), 무용학 석사(M.A)</li>
+                <li class="history-list">무용박사(D.F.A), 무용학박사(Ph.D)</li>
+              </ul>
+            </div>
+
+            <div class="box2">
+              <ul>
+                <li>
+                  <img
+                    src="../images/sub-1-2-section-icon.png"
+                    alt="연혁 아이콘"
+                  />
+                  <h4>2007.</h4>
+                </li>
+                <li class="history-list">
+                  체육학과대학에서 예술대학 소속으로 편제 개편
+                </li>
+              </ul>
+            </div>
+
+            <div class="box2">
+              <ul>
+                <li>
+                  <img
+                    src="../images/sub-1-2-section-icon.png"
+                    alt="연혁 아이콘"
+                  />
+                  <h4>2005.</h4>
+                </li>
+                <li class="history-list">
+                  '체육학 박사'에서 '무용학 박사'로 학위명 변경
+                </li>
+              </ul>
+            </div>
+
+            <div class="box2">
+              <ul>
+                <li>
+                  <img
+                    src="../images/sub-1-2-section-icon.png"
+                    alt="연혁 아이콘"
+                  />
+                  <h4>2002.</h4>
+                </li>
+                <li class="history-list">
+                  국내 최초 대학원 석박사 통합과정 신설
+                </li>
+              </ul>
+            </div>
+
+            <div class="box2">
+              <ul>
+                <li>
+                  <img
+                    src="../images/sub-1-2-section-icon.png"
+                    alt="연혁 아이콘"
+                  />
+                  <h4>2000.</h4>
+                </li>
+                <li class="history-list">무용과 박사학위 과정 신설</li>
+              </ul>
+            </div>
+
+            <div class="box2">
+              <ul>
+                <li>
+                  <img
+                    src="../images/sub-1-2-section-icon.png"
+                    alt="연혁 아이콘"
+                  />
+                  <h4>1993.</h4>
+                </li>
+                <li class="history-list">
+                  무용과 수여 학위명 ‘무용학사(Bachelor of Dance)’로 변경
+                </li>
+              </ul>
+            </div>
+
+            <div class="box2">
+              <ul>
+                <li>
+                  <img
+                    src="../images/sub-1-2-section-icon.png"
+                    alt="연혁 아이콘"
+                  />
+                  <h4>1973.</h4>
+                </li>
+                <li class="history-list">무용과 석사학위 과정 신설</li>
+              </ul>
+            </div>
+
+            <div class="box2">
+              <ul>
+                <li>
+                  <img
+                    src="../images/sub-1-2-section-icon.png"
+                    alt="연혁 아이콘"
+                  />
+                  <h4>1963.</h4>
+                </li>
+                <li class="history-list">국내 최초 무용과 창설</li>
+              </ul>
+            </div>
+          </div>
+        </section>
       </main>
     </div>
     <!-- // .wrap -->
-
-    <!-- 연혁 -->
-    <section id="history">
-      <div class="container">
-        <h3>학과연혁</h3>
-        <div class="annual">
-          <div class="box2">
-            <ul>
-              <li>
-                <img
-                  src="../images/sub-1-2-section-icon.png"
-                  alt="연혁 아이콘"
-                />
-                <h4>2013.</h4>
-              </li>
-              <li class="history-list">문화예술교육사 교육기관 선정</li>
-              <li class="history-list">문화예술교육사 2급 자격증 강의 개설</li>
-            </ul>
-          </div>
-
-          <div class="box2">
-            <ul>
-              <li>
-                <img
-                  src="../images/sub-1-2-section-icon.png"
-                  alt="연혁 아이콘"
-                />
-                <h4>2012.</h4>
-              </li>
-              <li class="history-list">국내 최초 무용학연구소 설립</li>
-            </ul>
-          </div>
-
-          <div class="box2">
-            <ul>
-              <li>
-                <img
-                  src="../images/sub-1-2-section-icon.png"
-                  alt="연혁 아이콘"
-                />
-                <h4>2009.</h4>
-              </li>
-              <li class="history-list">
-                예술대학에서 음악대학 소속으로 편제 개편
-              </li>
-              <li class="history-list">
-                공연예술대학원 설립 및 무용공연지도전공 신설
-              </li>
-            </ul>
-          </div>
-
-          <div class="box2">
-            <ul>
-              <li>
-                <img
-                  src="../images/sub-1-2-section-icon.png"
-                  alt="연혁 아이콘"
-                />
-                <h4>2008.</h4>
-              </li>
-              <li class="history-list">대학원 실기석박 세제도 도입</li>
-              <li class="history-list">
-                세계 최초 무용학 실기박사학위 과정 개설
-              </li>
-              <li class="history-list">수여학위명</li>
-              <li class="history-list">무용석사(M.F.A), 무용학 석사(M.A)</li>
-              <li class="history-list">무용박사(D.F.A), 무용학박사(Ph.D)</li>
-            </ul>
-          </div>
-
-          <div class="box2">
-            <ul>
-              <li>
-                <img
-                  src="../images/sub-1-2-section-icon.png"
-                  alt="연혁 아이콘"
-                />
-                <h4>2007.</h4>
-              </li>
-              <li class="history-list">
-                체육학과대학에서 예술대학 소속으로 편제 개편
-              </li>
-            </ul>
-          </div>
-
-          <div class="box2">
-            <ul>
-              <li>
-                <img
-                  src="../images/sub-1-2-section-icon.png"
-                  alt="연혁 아이콘"
-                />
-                <h4>2005.</h4>
-              </li>
-              <li class="history-list">
-                '체육학 박사'에서 '무용학 박사'로 학위명 변경
-              </li>
-            </ul>
-          </div>
-
-          <div class="box2">
-            <ul>
-              <li>
-                <img
-                  src="../images/sub-1-2-section-icon.png"
-                  alt="연혁 아이콘"
-                />
-                <h4>2002.</h4>
-              </li>
-              <li class="history-list">
-                국내 최초 대학원 석박사 통합과정 신설
-              </li>
-            </ul>
-          </div>
-
-          <div class="box2">
-            <ul>
-              <li>
-                <img
-                  src="../images/sub-1-2-section-icon.png"
-                  alt="연혁 아이콘"
-                />
-                <h4>2000.</h4>
-              </li>
-              <li class="history-list">무용과 박사학위 과정 신설</li>
-            </ul>
-          </div>
-
-          <div class="box2">
-            <ul>
-              <li>
-                <img
-                  src="../images/sub-1-2-section-icon.png"
-                  alt="연혁 아이콘"
-                />
-                <h4>1993.</h4>
-              </li>
-              <li class="history-list">
-                무용과 수여 학위명 ‘무용학사(Bachelor of Dance)’로 변경
-              </li>
-            </ul>
-          </div>
-
-          <div class="box2">
-            <ul>
-              <li>
-                <img
-                  src="../images/sub-1-2-section-icon.png"
-                  alt="연혁 아이콘"
-                />
-                <h4>1973.</h4>
-              </li>
-              <li class="history-list">무용과 석사학위 과정 신설</li>
-            </ul>
-          </div>
-
-          <div class="box2">
-            <ul>
-              <li>
-                <img
-                  src="../images/sub-1-2-section-icon.png"
-                  alt="연혁 아이콘"
-                />
-                <h4>1963.</h4>
-              </li>
-              <li class="history-list">국내 최초 무용과 창설</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- footer -->
     <footer id="main-footer">

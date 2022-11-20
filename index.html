@@ -17,7 +17,7 @@
       href="./css/mobile.css"
       media="screen and (max-width: 767px)"
     />
-    <!-- css style -->
+    <!-- script -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="./js/main.js"></script>
   </head>
@@ -70,12 +70,70 @@
           </ul>
         </nav>
         <!-- 토글버튼 -->
-        <div class="btn-toggle">
+        <div id="btn-toggle">
           <img src="./images/toggle-site-map.svg" alt="toggle sitemap" />
         </div>
       </div>
       <!-- // header .container -->
     </header>
+
+    <!-- site-map -->
+    <div id="site-map">
+      <div class="container">
+        <div class="header-cover">
+          <h1>
+            <a href="./index.html"
+              ><img src="./images/logo.png" alt="로고"
+            /></a>
+          </h1>
+          <button class="btn-close">
+            <img src="./images/close.svg" alt="닫기" />
+          </button>
+        </div>
+        <nav class="site-map-menu">
+          <ul class="depth1">
+            <li>
+              <a href="./pages/sub1-1.html">학과소개</a>
+              <ul class="depth2">
+                <li><a href="./pages/sub1-1.html">학과소개</a></li>
+                <li><a href="./pages/sub1-2.html">학과연혁</a></li>
+                <li><a href="./pages/sub1-3.html">교수진</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="./pages/sub2-1.html">교과과정</a>
+              <ul class="depth2">
+                <li><a href="./pages/sub2-1.html">교과과정</a></li>
+                <li><a href="./pages/sub2-2.html">전공안내</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="./pages/sub3-1.html">공지사항</a>
+              <ul class="depth2">
+                <li><a href="./pages/sub3-1.html">공지사항</a></li>
+                <li><a href="./pages/sub3-2.html">학과행사</a></li>
+                <li><a href="./pages/sub3-3.html">외부행사</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="./pages/sub4-1.html">연습실 예약</a>
+              <ul class="depth2">
+                <li><a href="./pages/sub4-1.html">연습실 예약</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="./pages/sub5-1.html">오시는 길</a>
+              <ul class="depth2">
+                <li><a href="./pages/sub5-1.html">오시는 길</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <!-- // site-map -->
+
     <!-- main-visual -->
     <section id="main-visual">
       <div class="container">
@@ -195,13 +253,13 @@
             <button class="btn-month">November</button>
             <table class="calendar">
               <tr>
-                <td class="sun">Su</td>
-                <td>Mo</td>
-                <td>Tu</td>
-                <td>We</td>
-                <td>Th</td>
-                <td>Fr</td>
-                <td class="sat">Sa</td>
+                <th class="sun">Su</th>
+                <th>Mo</th>
+                <th>Tu</th>
+                <th>We</th>
+                <th>Th</th>
+                <th>Fr</th>
+                <th class="sat">Sa</th>
               </tr>
 
               <tr>
@@ -229,7 +287,7 @@
                 <td>14</td>
                 <td>15</td>
                 <td>16</td>
-                <td class="choosed">17</td>
+                <td>17</td>
                 <td>18</td>
                 <td class="sat">19</td>
               </tr>
@@ -247,7 +305,7 @@
               <tr>
                 <td class="sun">27</td>
                 <td>28</td>
-                <td>29</td>
+                <td class="choosed">29</td>
                 <td>30</td>
                 <td></td>
                 <td></td>
@@ -255,16 +313,16 @@
               </tr>
             </table>
           </div>
-          <!-- // schedule-box -->
+          <!-- // calendar-box -->
           <div class="schedule-list">
             <div class="schedule-date">
-              <a href="#">
+              <button class="btn-prev">
                 <img src="./images/main-schedule-icon-prev.svg" alt="이전" />
-              </a>
-              <span>2022.11.27</span>
-              <a href="#">
+              </button>
+              <p class="choosed-date">2022.11.29</p>
+              <button class="btn-next">
                 <img src="./images/main-schedule-icon-next.svg" alt="다음" />
-              </a>
+              </button>
             </div>
             <a href="#">학사일정</a>
             <ul>

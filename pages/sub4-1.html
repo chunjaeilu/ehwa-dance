@@ -17,6 +17,13 @@
       href="../css/sub-mobile.css"
       media="screen and (max-width: 767px)"
     />
+
+    <!-- script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <script src="../js/sub.js"></script>
+
+    <!-- 달력 script -->
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
     <link
@@ -89,43 +96,99 @@
           </ul>
         </nav>
         <!-- 토글버튼 -->
-        <div class="btn-toggle">
+        <div id="btn-toggle">
           <img src="../images/toggle-site-map.svg" alt="toggle sitemap" />
         </div>
       </div>
       <!-- // header .container -->
     </header>
+
+    <!-- site-map -->
+    <div id="site-map">
+      <div class="container">
+        <div class="header-cover">
+          <h1>
+            <a href="../index.html"
+              ><img src="../images/logo.png" alt="로고"
+            /></a>
+          </h1>
+          <button class="btn-close">
+            <img src="../images/close.svg" alt="닫기" />
+          </button>
+        </div>
+        <nav class="site-map-menu">
+          <ul class="depth1">
+            <li>
+              <a href="./sub1-1.html">학과소개</a>
+              <ul class="depth2">
+                <li><a href="./sub1-1.html">학과소개</a></li>
+                <li><a href="./sub1-2.html">학과연혁</a></li>
+                <li><a href="./sub1-3.html">교수진</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="./sub2-1.html">교과과정</a>
+              <ul class="depth2">
+                <li><a href="./sub2-1.html">교과과정</a></li>
+                <li><a href="./sub2-2.html">전공안내</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="./sub3-1.html">공지사항</a>
+              <ul class="depth2">
+                <li><a href="./sub3-1.html">공지사항</a></li>
+                <li><a href="./sub3-2.html">학과행사</a></li>
+                <li><a href="./sub3-3.html">외부행사</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="./sub4-1.html">연습실 예약</a>
+              <ul class="depth2">
+                <li><a href="./sub4-1.html">연습실 예약</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="sub5-1.html">오시는 길</a>
+              <ul class="depth2">
+                <li><a href="sub5-1.html">오시는 길</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <!-- // site-map -->
+
     <!-- wrap -->
     <div class="wrap">
       <!-- lnb -->
       <div class="lnb">
         <h3>
-          <a href="./sub1-1.html"
-            >학과소개<img
+          <a href="./sub4-1.html"
+            >연습실 예약<img
               class="mob-only"
               src="../images/sub-lnb-2depth-btn.svg"
               alt="btn-below"
           /></a>
         </h3>
         <ul class="lnb-list">
-          <li class="active"><a href="./sub1-1.html">학과소개</a></li>
-          <li><a href="./sub1-2.html">학과연혁</a></li>
-          <li><a href="./sub1-3.html">교수진</a></li>
+          <li class="active"><a href="./sub1-1.html">연습실 예약</a></li>
         </ul>
       </div>
       <!-- // lnb -->
       <main>
         <div class="sub-title">
-          <h1>학과소개</h1>
+          <h1>연습실 예약</h1>
         </div>
         <div class="sub-path">
           <a href="../index.html"
             ><img src="../images/icon-home.png" alt="home"
           /></a>
           <img src="../images/icon-arrow.svg" alt="arrow" />
-          <p>학과소개</p>
+          <p>연습실 예약</p>
           <img src="../images/icon-arrow.svg" alt="arrow" />
-          <p>학과소개</p>
+          <p>연습실 예약</p>
         </div>
         <!-- section1 -->
         <section class="section1">
@@ -160,7 +223,7 @@
 
         <!-- section2 -->
         <section class="section2">
-          <h2>연습실 예약 안내</h2>
+          <h3>연습실 예약 안내</h3>
           <p>
             · 이화여자대학교 무용(학)과 이번 학기 등록 학생들은 홈페이지를 통해
             연습실 예약을 할 수 있습니다. <br />
@@ -208,21 +271,21 @@
         <!-- // section2 -->
         <section class="section3">
           <div class="button-style">
-            <button>
+            <button class="active">
               홀I<br />
-              (체육관 A동)
+              <span class="web-only">(체육관 A동)</span>
             </button>
             <button>
               홀IV<br />
-              (체육관 C동 B1)
+              <span class="web-only"> (체육관 C동 B1)</span>
             </button>
             <button>
               홀V<br />
-              (체육관 C동 B1)
+              <span class="web-only"> (체육관 C동 B1)</span>
             </button>
             <button>
               홀402호<br />
-              (체육관 B동 F4)
+              <span class="web-only"> (체육관 B동 F4)</span>
             </button>
           </div>
           <!-- button -->

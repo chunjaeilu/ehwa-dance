@@ -17,6 +17,11 @@
       href="../css/sub-mobile.css"
       media="screen and (max-width: 767px)"
     />
+
+    <!-- script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <script src="../js/sub.js"></script>
   </head>
 
   <body id="sub1-3">
@@ -68,12 +73,70 @@
           </ul>
         </nav>
         <!-- 토글버튼 -->
-        <div class="btn-toggle">
+        <div id="btn-toggle">
           <img src="../images/toggle-site-map.svg" alt="toggle sitemap" />
         </div>
       </div>
       <!-- // header .container -->
     </header>
+
+    <!-- site-map -->
+    <div id="site-map">
+      <div class="container">
+        <div class="header-cover">
+          <h1>
+            <a href="../index.html"
+              ><img src="../images/logo.png" alt="로고"
+            /></a>
+          </h1>
+          <button class="btn-close">
+            <img src="../images/close.svg" alt="닫기" />
+          </button>
+        </div>
+        <nav class="site-map-menu">
+          <ul class="depth1">
+            <li>
+              <a href="./sub1-1.html">학과소개</a>
+              <ul class="depth2">
+                <li><a href="./sub1-1.html">학과소개</a></li>
+                <li><a href="./sub1-2.html">학과연혁</a></li>
+                <li><a href="./sub1-3.html">교수진</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="./sub2-1.html">교과과정</a>
+              <ul class="depth2">
+                <li><a href="./sub2-1.html">교과과정</a></li>
+                <li><a href="./sub2-2.html">전공안내</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="./sub3-1.html">공지사항</a>
+              <ul class="depth2">
+                <li><a href="./sub3-1.html">공지사항</a></li>
+                <li><a href="./sub3-2.html">학과행사</a></li>
+                <li><a href="./sub3-3.html">외부행사</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="./sub4-1.html">연습실 예약</a>
+              <ul class="depth2">
+                <li><a href="./sub4-1.html">연습실 예약</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="sub5-1.html">오시는 길</a>
+              <ul class="depth2">
+                <li><a href="sub5-1.html">오시는 길</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <!-- // site-map -->
+
     <!-- wrap -->
     <div class="wrap">
       <!-- lnb -->
@@ -106,120 +169,190 @@
           <img src="../images/icon-arrow.svg" alt="arrow" />
           <p>학과소개</p>
           <img src="../images/icon-arrow.svg" alt="arrow" />
-          <p>학과소개</p>
+          <p>교수진</p>
         </div>
+
+        <!-- section1 -->
+        <section class="section1">
+          <div class="section1-title">
+            <div class="sub-main-visual">
+              <img
+                src="../images/sub-1-3-main-visual.jpg"
+                alt="sub1-1 visual"
+              />
+            </div>
+            <div class="textbox">
+              <h1 class="crimson">
+                Informaiton of
+                <span class="main-color"> Professors </span> <br />
+              </h1>
+              <h2>
+                젊은 무용인의 꿈을 위해 <br />
+                전문적이고 열정 넘치는 교수진이 <br />
+                함께 합니다.
+              </h2>
+              <img
+                src="../images/sub-section1-line.png"
+                alt="섹션1 라인"
+                class="line"
+              />
+            </div>
+          </div>
+        </section>
+        <!-- // section1 -->
 
         <!-- 교수진 -->
         <section id="professor">
-          <div class="container">
-            <div class="profile">
-              <div class="profile-box">
-                <ul>
-                  <li>
-                    <img src="../images/sub-1-3-section-1.jpg" alt="조기숙" />
-                  </li>
-                  <li>
-                    <strong>조기숙</strong> 교수
-                    <img
-                      class="icon-mail"
-                      src="../images/icon-mail.png"
-                      alt="mail"
-                    />
-                  </li>
-                  <li class="profile-list">무용과</li>
-                  <li class="profile-list">체육관 C동 403호</li>
-                  <li class="profile-list">02 - 3277 - 4475</li>
-                </ul>
+          <h4>교수진</h4>
+          <div class="profile">
+            <div class="profile-box">
+              <div class="profile-img">
+                <img src="../images/sub-1-3-section-1.jpg" alt="조기숙" />
               </div>
-              <!-- profile-box -->
-
-              <div class="profile-box">
-                <ul>
-                  <li>
-                    <img src="../images/sub-1-3-section-2.jpg" alt="어수정" />
-                  </li>
-                  <li>
-                    <strong>어수정</strong> 초빙교수
-                    <img src="../images/icon-mail.png" alt="mail" />
-                  </li>
-                  <li class="profile-list">무용과</li>
-                </ul>
-              </div>
-              <!-- profile-box -->
-
-              <div class="profile-box">
-                <ul>
-                  <li>
-                    <img src="../images/sub-1-3-section-3.jpg" alt="유화정" />
-                  </li>
-                  <li>
-                    <strong>유화정</strong> 초빙교수
-                    <img src="../images/icon-mail.png" alt="mail" />
-                  </li>
-                  <li class="profile-list">무용과</li>
-                </ul>
-              </div>
-              <!-- profile-box -->
-
-              <div class="profile-box">
-                <ul>
-                  <li>
-                    <img src="../images/sub-1-3-section-4.jpg" alt="이남영" />
-                  </li>
-                  <li>
-                    <strong>이남영</strong> 초빙교수
-                    <img src="../images/icon-mail.png" alt="mail" />
-                  </li>
-                  <li class="profile-list">무용과</li>
-                </ul>
-              </div>
-              <!-- profile-box -->
-
-              <div class="profile-box">
-                <ul>
-                  <li>
-                    <img src="../images/sub-1-3-section-5.jpg" alt="이지혜" />
-                  </li>
-                  <li>
-                    <strong>이지혜</strong> 초빙교수
-                    <img src="../images/icon-mail.png" alt="mail" />
-                  </li>
-                  <li class="profile-list">무용과</li>
-                </ul>
-              </div>
-              <!-- profile-box -->
-
-              <div class="profile-box">
-                <ul>
-                  <li>
-                    <img src="../images/sub-1-3-section-6.jpg" alt="이진경" />
-                  </li>
-                  <li>
-                    <strong>이진경</strong> 초빙교수
-                    <img src="../images/icon-mail.png" alt="mail" />
-                  </li>
-                  <li class="profile-list">무용과</li>
-                </ul>
-              </div>
-              <!-- profile-box -->
-
-              <div class="profile-box">
-                <ul>
-                  <li>
-                    <img src="../images/sub-1-3-section-7.jpg" alt="한혜주" />
-                  </li>
-                  <li>
-                    <strong>한혜주</strong> 초빙교수
-                    <img src="../images/icon-mail.png" alt="mail" />
-                  </li>
-                  <li class="profile-list">무용과</li>
-                </ul>
-              </div>
-              <!-- profile-box -->
+              <ul class="profile-ul">
+                <li><strong>조기숙</strong> 교수</li>
+                <li class="profile-list">무용과 (한국무용)</li>
+                <li class="profile-list">체육관 C동 403호</li>
+                <li class="profile-list">02 - 3277 - 4475</li>
+                <p>
+                  <img
+                    class="icon-mail"
+                    src="../images/icon-mail.png"
+                    alt="mail"
+                  />
+                  <span class="profile-email">kscho2@ewha.ac.kr</span>
+                </p>
+              </ul>
             </div>
-            <!-- profile -->
+            <!-- profile-box -->
+
+            <div class="profile-box">
+              <div class="profile-img">
+                <img src="../images/sub-1-3-section-2.jpg" alt="어수정" />
+              </div>
+              <ul class="profile-ul">
+                <li><strong>어수정</strong> 초빙교수</li>
+                <li class="profile-list">무용과 (발레)</li>
+                <li class="profile-list">체육관 C동 405호</li>
+                <li class="profile-list">02 - 3277 - 4478</li>
+                <p>
+                  <img
+                    class="icon-mail"
+                    src="../images/icon-mail.png"
+                    alt="mail"
+                  />
+                  <span class="profile-email">mimesis55@ewha.ac.kr</span>
+                </p>
+              </ul>
+            </div>
+            <!-- profile-box -->
+
+            <div class="profile-box">
+              <div class="profile-img">
+                <img src="../images/sub-1-3-section-3.jpg" alt="유화정" />
+              </div>
+              <ul class="profile-ul">
+                <li><strong>유화정</strong> 초빙교수</li>
+                <li class="profile-list">무용과 (현대무용)</li>
+                <li class="profile-list">체육관 C동 406호</li>
+                <li class="profile-list">02 - 3277 - 4474</li>
+                <p>
+                  <img
+                    class="icon-mail"
+                    src="../images/icon-mail.png"
+                    alt="mail"
+                  />
+                  <span class="profile-email">whajung.yoo@ewha.ac.kr</span>
+                </p>
+              </ul>
+            </div>
+            <!-- profile-box -->
+
+            <div class="profile-box">
+              <div class="profile-img">
+                <img src="../images/sub-1-3-section-4.jpg" alt="이남영" />
+              </div>
+              <ul class="profile-ul">
+                <li><strong>이남영</strong> 초빙교수</li>
+                <li class="profile-list">무용과 (현대무용)</li>
+                <li class="profile-list">체육관 C동 408호</li>
+                <li class="profile-list">02 - 3277 - 4473</li>
+                <p>
+                  <img
+                    class="icon-mail"
+                    src="../images/icon-mail.png"
+                    alt="mail"
+                  />
+                  <span class="profile-email">dangce@ewha.ac.kr</span>
+                </p>
+              </ul>
+            </div>
+            <!-- profile-box -->
+
+            <div class="profile-box">
+              <div class="profile-img">
+                <img src="../images/sub-1-3-section-5.jpg" alt="이지혜" />
+              </div>
+              <ul class="profile-ul">
+                <li><strong>이지혜</strong> 초빙교수</li>
+                <li class="profile-list">무용과 (발레)</li>
+                <li class="profile-list">체육관 C동 404호</li>
+                <li class="profile-list">02 - 3277 - 4472</li>
+                <p>
+                  <img
+                    class="icon-mail"
+                    src="../images/icon-mail.png"
+                    alt="mail"
+                  />
+                  <span class="profile-email">wisdomlee@ewha.ac.kr</span>
+                </p>
+              </ul>
+            </div>
+            <!-- profile-box -->
+
+            <div class="profile-box">
+              <div class="profile-img">
+                <img src="../images/sub-1-3-section-6.jpg" alt="이진경" />
+              </div>
+              <ul class="profile-ul">
+                <li><strong>이진경</strong> 초빙교수</li>
+                <li class="profile-list">무용과 (한국무용)</li>
+                <li class="profile-list">체육관 C동 409호</li>
+                <li class="profile-list">02 - 3277 - 4471</li>
+                <p>
+                  <img
+                    class="icon-mail"
+                    src="../images/icon-mail.png"
+                    alt="mail"
+                  />
+                  <span class="profile-email">leejinkyung22@ewha.ac.kr</span>
+                </p>
+              </ul>
+            </div>
+            <!-- profile-box -->
+
+            <div class="profile-box">
+              <div class="profile-img">
+                <img src="../images/sub-1-3-section-7.jpg" alt="한혜주" />
+              </div>
+              <ul class="profile-ul">
+                <li><strong>한혜주</strong> 초빙교수</li>
+                <li class="profile-list">무용과 (현대무용)</li>
+                <li class="profile-list">체육관 C동 401호</li>
+                <li class="profile-list">02 - 3277 - 4479</li>
+                <p>
+                  <img
+                    class="icon-mail"
+                    src="../images/icon-mail.png"
+                    alt="mail"
+                  />
+                  <span class="profile-email">hanhyeajoo@ewha.ac.kr</span>
+                </p>
+              </ul>
+            </div>
+            <!-- profile-box -->
           </div>
-          <!-- container -->
+          <!-- profile -->
         </section>
       </main>
     </div>

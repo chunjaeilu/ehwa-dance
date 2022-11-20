@@ -17,6 +17,11 @@
       href="../css/sub-mobile.css"
       media="screen and (max-width: 767px)"
     />
+
+    <!-- script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <script src="../js/sub.js"></script>
   </head>
   <body id="sub2-1">
     <!-- header -->
@@ -67,12 +72,70 @@
           </ul>
         </nav>
         <!-- 토글버튼 -->
-        <div class="btn-toggle">
+        <div id="btn-toggle">
           <img src="../images/toggle-site-map.svg" alt="toggle sitemap" />
         </div>
       </div>
       <!-- // header .container -->
     </header>
+
+    <!-- site-map -->
+    <div id="site-map">
+      <div class="container">
+        <div class="header-cover">
+          <h1>
+            <a href="../index.html"
+              ><img src="../images/logo.png" alt="로고"
+            /></a>
+          </h1>
+          <button class="btn-close">
+            <img src="../images/close.svg" alt="닫기" />
+          </button>
+        </div>
+        <nav class="site-map-menu">
+          <ul class="depth1">
+            <li>
+              <a href="./sub1-1.html">학과소개</a>
+              <ul class="depth2">
+                <li><a href="./sub1-1.html">학과소개</a></li>
+                <li><a href="./sub1-2.html">학과연혁</a></li>
+                <li><a href="./sub1-3.html">교수진</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="./sub2-1.html">교과과정</a>
+              <ul class="depth2">
+                <li><a href="./sub2-1.html">교과과정</a></li>
+                <li><a href="./sub2-2.html">전공안내</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="./sub3-1.html">공지사항</a>
+              <ul class="depth2">
+                <li><a href="./sub3-1.html">공지사항</a></li>
+                <li><a href="./sub3-2.html">학과행사</a></li>
+                <li><a href="./sub3-3.html">외부행사</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="./sub4-1.html">연습실 예약</a>
+              <ul class="depth2">
+                <li><a href="./sub4-1.html">연습실 예약</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="sub5-1.html">오시는 길</a>
+              <ul class="depth2">
+                <li><a href="sub5-1.html">오시는 길</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <!-- // site-map -->
+
     <!-- wrap -->
     <div class="wrap">
       <!-- lnb -->
@@ -117,7 +180,7 @@
             </div>
             <div class="textbox">
               <h1 class="crimson">
-                A COURSE OF STUDY
+                A COURSE OF STUDY <br />
                 <span class="main-color"> DEPARTMENT OF DANCE </span>
               </h1>
               <h2>
@@ -140,10 +203,49 @@
           </div>
         </section>
         <section class="section2">
-          <img src="../images/sub-2-1-section-1.jpg" alt="교과과정" />
-          <img src="../images/sub-2-1-section-2.jpg" alt="교과과정" />
-          <img src="../images/sub-2-1-section-3.jpg" alt="교과과정" />
-          <img src="../images/sub-2-1-section-4.png" alt="교과과정" />
+          <img
+            class="web-only"
+            src="../images/sub-2-1-section-1.jpg"
+            alt="1학년"
+          />
+
+          <img
+            class="mob-only"
+            src="../images/sub-2-1-section-1-mob.jpg"
+            alt="1학년"
+          />
+
+          <img class="web-only" src="../images/sub-2-1-section-2.jpg" alt="" />
+
+          <img
+            class="mob-only"
+            src="../images/sub-2-1-section-2-mob.jpg"
+            alt="2학년"
+          />
+
+          <img
+            class="web-only"
+            src="../images/sub-2-1-section-3.jpg"
+            alt="3학년"
+          />
+
+          <img
+            class="mob-only"
+            src="../images/sub-2-1-section-3-mob.jpg"
+            alt="3학년"
+          />
+
+          <img
+            class="web-only"
+            src="../images/sub-2-1-section-4.jpg"
+            alt="4학년"
+          />
+
+          <img
+            class="mob-only"
+            src="../images/sub-2-1-section-4-mob.jpg"
+            alt="4학년"
+          />
         </section>
       </main>
     </div>
