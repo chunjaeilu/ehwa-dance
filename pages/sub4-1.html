@@ -22,29 +22,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
     <script src="../js/sub.js"></script>
-
-    <!-- 달력 script -->
-    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css"
-    />
-    <link href="fullcalendar/main.css" rel="stylesheet" />
-    <script src="fullcalendar/main.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        var calendarEl = document.getElementById("calendar");
-        var calendar = new FullCalendar.Calendar(calendarEl, {
-          initialView: "dayGridMonth",
-        });
-        calendar.render();
-      });
-    </script>
   </head>
 
   <body id="sub4-1">
@@ -70,15 +47,15 @@
               <a href="./sub2-1.html">교과과정</a>
               <ul class="depth2">
                 <li><a href="./sub2-1.html">교과과정</a></li>
-                <li><a href="./sub2-2.html">전공안내</a></li>
+                <li><a href="#">전공안내</a></li>
               </ul>
             </li>
             <li>
-              <a href="./sub3-1.html">공지사항</a>
+              <a href="#">공지사항</a>
               <ul class="depth2">
-                <li><a href="./sub3-1.html">공지사항</a></li>
-                <li><a href="./sub3-2.html">학과행사</a></li>
-                <li><a href="./sub3-3.html">외부행사</a></li>
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">학과행사</a></li>
+                <li><a href="#">외부행사</a></li>
               </ul>
             </li>
             <li>
@@ -130,15 +107,15 @@
               <a href="./sub2-1.html">교과과정</a>
               <ul class="depth2">
                 <li><a href="./sub2-1.html">교과과정</a></li>
-                <li><a href="./sub2-2.html">전공안내</a></li>
+                <li><a href="#">전공안내</a></li>
               </ul>
             </li>
             <li>
-              <a href="./sub3-1.html">공지사항</a>
+              <a href="#">공지사항</a>
               <ul class="depth2">
-                <li><a href="./sub3-1.html">공지사항</a></li>
-                <li><a href="./sub3-2.html">학과행사</a></li>
-                <li><a href="./sub3-3.html">외부행사</a></li>
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">학과행사</a></li>
+                <li><a href="#">외부행사</a></li>
               </ul>
             </li>
 
@@ -284,17 +261,122 @@
               <span class="web-only"> (체육관 C동 B1)</span>
             </button>
             <button>
-              홀402호<br />
+              홀402<br />
               <span class="web-only"> (체육관 B동 F4)</span>
             </button>
           </div>
           <!-- button -->
         </section>
         <section class="section4">
-          <div id="calendar"></div>
-        </section>
-        <section class="section5">
-          <img src="../images/예약테이블.jpg" alt="예약테이블" />
+          <div class="calendar-box">
+            <table class="calendar">
+              <caption>
+                November
+              </caption>
+              <tr>
+                <th class="sun">Sun</th>
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+                <th>Thu</th>
+                <th>Fri</th>
+                <th class="sat">Sat</th>
+              </tr>
+
+              <tr>
+                <td class="sun"></td>
+                <td></td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td class="sat">5</td>
+              </tr>
+
+              <tr>
+                <td class="sun">6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+                <td>11</td>
+                <td class="sat">12</td>
+              </tr>
+
+              <tr>
+                <td class="sun">13</td>
+                <td>14</td>
+                <td>15</td>
+                <td>16</td>
+                <td>17</td>
+                <td>18</td>
+                <td class="sat">19</td>
+              </tr>
+
+              <tr>
+                <td class="sun">20</td>
+                <td class="choosed">21</td>
+                <td>22</td>
+                <td>23</td>
+                <td>24</td>
+                <td>25</td>
+                <td class="sat">26</td>
+              </tr>
+
+              <tr>
+                <td class="sun">27</td>
+                <td>28</td>
+                <td>29</td>
+                <td>30</td>
+                <td></td>
+                <td></td>
+                <td class="sat"></td>
+              </tr>
+            </table>
+          </div>
+          <div class="popup-reservation">
+            <form id="form-reservation" action="">
+              <div class="choosed-hall">홀I</div>
+              <h3 class="choosed-date">2022.11.21(월)</h3>
+              <button class="btn-close">
+                <img src="../images/close.svg" alt="닫기" />
+              </button>
+              <label for="time">이용시간</label>
+              <select name="time" id="time" required>
+                <option value="2">2교시</option>
+                <option value="3">3교시</option>
+                <option value="4">4교시</option>
+                <option value="5">5교시</option>
+                <option value="6">6교시</option>
+                <option value="7">7교시</option>
+              </select>
+              <br />
+              <label for="name">이름</label>
+              <input type="text" id="name" name="name" required />
+              <br />
+              <label for="student-id">학번</label>
+              <input
+                type="text"
+                id="student-id"
+                name="student-id"
+                placeholder="하이픈(-) 없이 입력"
+                maxlength="7"
+                required
+              />
+              <br />
+              <label for="people-num">인원</label>
+              <input
+                type="number"
+                id="people-num"
+                name="people-num"
+                value="1"
+                required
+              />
+              <br />
+
+              <button class="btn-reservation" type="submit">예약하기</button>
+            </form>
+          </div>
         </section>
       </main>
     </div>

@@ -237,12 +237,19 @@ a {
   opacity: 1;
 }
 
+/* ###### 서브페이지 배경 ##### */
+body {
+  background-image: url(../images/sitemap-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 86%;
+}
+
 /* ##### wrap ##### */
 /* 본문 전체 */
 .wrap {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 50px;
+  /* padding: 0 50px; */
   position: relative;
   display: flex;
 }
@@ -285,7 +292,7 @@ a {
 
 /* ##### main ##### */
 main {
-  width: 1000px;
+  width: 1100px;
   position: relative;
 }
 
@@ -352,7 +359,7 @@ main {
 /* sub1-1 */
 /* ##### section1 ##### */
 #sub1-1 .section1 {
-  width: 1000px;
+  width: 1100px;
   padding: 50px 0;
 }
 
@@ -361,13 +368,13 @@ main {
 }
 
 #sub1-1 .section1 .sub-main-visual {
-  margin-right: 20px;
-  width: 433px;
-  height: 270px;
+  margin-right: 70px;
+  width: 483px;
+  /* height: 270px; */
 }
 
 #sub1-1 .section1 .sub-main-visual img {
-  /* width: 100%; */
+  width: 483px;
   object-fit: cover;
 }
 
@@ -456,6 +463,7 @@ main {
 /* ##### sub1-2 section1 ##### */
 
 #sub1-2 .section1 {
+  width: 1100px;
   padding: 50px 0;
 }
 
@@ -464,13 +472,12 @@ main {
 }
 
 #sub1-2 .section1 .sub-main-visual {
-  margin-right: 20px;
-  width: 433px;
-  height: 270px;
+  margin-right: 70px;
+  width: 483px;
 }
 
 #sub1-2 .section1 .sub-main-visual img {
-  /* width: 100%; */
+  width: 483px;
   object-fit: cover;
 }
 
@@ -560,6 +567,7 @@ main {
 /* ##### sub1-3 section1 ##### */
 
 #sub1-3 .section1 {
+  width: 1100px;
   padding: 50px 0;
 }
 
@@ -568,13 +576,12 @@ main {
 }
 
 #sub1-3 .section1 .sub-main-visual {
-  margin-right: 20px;
-  width: 433px;
-  height: 270px;
+  margin-right: 70px;
+  width: 483px;
 }
 
 #sub1-3 .section1 .sub-main-visual img {
-  /* width: 100%; */
+  width: 483px;
   object-fit: cover;
 }
 
@@ -665,7 +672,7 @@ main {
 
 /* ##### section1 ##### */
 #sub2-1 .section1 {
-  width: 1000px;
+  width: 1100px;
   padding: 50px 0;
 }
 
@@ -674,12 +681,12 @@ main {
 }
 
 #sub2-1 .section1 .sub-main-visual {
-  margin-right: 20px;
-  width: 433px;
-  height: 270px;
+  margin-right: 70px;
+  width: 483px;
 }
 
 #sub2-1 .section1 .sub-main-visual img {
+  width: 483px;
   object-fit: cover;
 }
 
@@ -724,7 +731,7 @@ main {
 /* sub4-1 */
 /* ##### section1 ##### */
 #sub4-1 .section1 {
-  width: 1000px;
+  width: 1100px;
   padding: 50px 0;
 }
 
@@ -733,13 +740,12 @@ main {
 }
 
 #sub4-1 .section1 .sub-main-visual {
-  margin-right: 20px;
-  width: 433px;
-  height: 270px;
+  margin-right: 70px;
+  width: 483px;
 }
 
 #sub4-1 .section1 .sub-main-visual img {
-  /* width: 100%; */
+  width: 483px;
   object-fit: cover;
 }
 
@@ -815,12 +821,150 @@ main {
   box-shadow: 3px 3px 3px #ccc;
 }
 
+/* .section4 연습실 예약 */
+#sub4-1 .section4 {
+  width: 100%;
+}
+
+#sub4-1 .section4 .calendar-box {
+  width: 100%;
+  display: flex;
+  padding-top: 20px;
+  justify-content: space-between;
+}
+
+#sub4-1 .section4 .calendar {
+  font-size: 15px;
+  width: 100%;
+  text-align: center;
+  line-height: 30px;
+  border-collapse: collapse;
+}
+
+#sub4-1 .section4 .calendar caption {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+#sub4-1 .section4 .calendar th,
+#sub4-1 .section4 .calendar td {
+  width: calc(100% / 7);
+  border: 1px solid #ccc;
+  padding: 5px;
+}
+
+#sub4-1 .section4 .calendar th {
+  font-weight: 600;
+}
+
+#sub4-1 .section4 .calendar td {
+  text-align: right;
+  vertical-align: top;
+  cursor: pointer;
+  height: 100px;
+}
+
+/* calendar style */
+
+#sub4-1 .section4 .calendar .sat {
+  color: #17a1fa;
+}
+
+#sub4-1 .section4 .calendar .sun {
+  color: #d9534f;
+}
+
+#sub4-1 .section4 .calendar td.choosed {
+  background: rgba(0, 102, 64, 0.2);
+  font-weight: 700;
+}
+
+/* 예약페이지 팝업창 */
+
+#sub4-1 .section4 .popup-reservation {
+  width: 350px;
+  border-radius: 20px;
+  border: 0.1px solid #ccc;
+  box-shadow: 4px 4px 5px #ccc;
+  padding: 20px;
+  background: #fff;
+}
+
+#sub4-1 .section4 .popup-reservation form {
+  position: relative;
+}
+
+#sub4-1 .section4 .popup-reservation .choosed-hall {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: var(--main-color);
+  color: #fff;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+}
+
+#sub4-1 .section4 .popup-reservation .choosed-date {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+#sub4-1 .section4 .popup-reservation .btn-close {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background: none;
+  border: none;
+}
+
+#sub4-1 .section4 .popup-reservation .btn-close img {
+  width: 20px;
+}
+
+#sub4-1 .section4 .popup-reservation .btn-reservation {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 65px;
+  height: 65px;
+  background: var(--main-color);
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+}
+
+/* 팝업 포지션 */
+#sub4-1 .section4 {
+  position: relative;
+}
+
+#sub4-1 .section4 .popup-reservation {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* 팝업창 view 전환 */
+#sub4-1 .section4 .popup-reservation {
+  display: none;
+}
+
+#sub4-1 .section4 .popup-reservation.view {
+  display: block;
+}
+
 /* ::::::::::::::::::::::::::::::::::::::::::::::::: */
 
 /* sub5-1 */
 /* ##### section1 ##### */
 #sub5-1 .section1 {
-  width: 1000px;
+  width: 1100px;
   padding: 50px 0;
 }
 
@@ -829,13 +973,12 @@ main {
 }
 
 #sub5-1 .section1 .sub-main-visual {
-  margin-right: 20px;
-  width: 433px;
-  height: 270px;
+  margin-right: 70px;
+  width: 483px;
 }
 
 #sub5-1 .section1 .sub-main-visual img {
-  /* width: 100%; */
+  width: 483px;
   object-fit: cover;
 }
 
