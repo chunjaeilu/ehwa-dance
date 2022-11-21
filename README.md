@@ -7,7 +7,9 @@ URL : https://chunjaeilu.github.io/ehwa-dance/
 
 #### 팀원 개인 repository
 김민수 : https://github.com/chunjaeilu/ehwa-dance.git
+
 최정호 : https://github.com/goodcodemakers/ehwa-dance-main
+
 허희연 : https://github.com/HeeyeonHeo/ewha_dance
 
 ### 프로젝트 과제
