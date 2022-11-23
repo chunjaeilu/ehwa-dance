@@ -6,6 +6,12 @@
 /* font-family: 'Nanum Myeongjo', serif; */
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap");
 
+/* font-flamily: "ehwa" */
+@font-face {
+  font-family: "ehwa";
+  src: url(../fonts/ewha.ttf);
+}
+
 /* 미디어쿼리 */
 .web-only {
   display: none;
@@ -20,17 +26,19 @@
 body {
   font-family: "Noto Sans KR", sans-serif;
   font-size: 15px;
+  padding-top: 80px;
 }
 
 h1 {
-  font-size: 15px;
+  font-family: "ehwa", "Noto Sans KR", sans-serif;
+  font-size: 20px;
   font-weight: 700;
 }
 
 h1 .crimson,
 h1.crimson {
   font-family: "Crimson Text", serif;
-  font-size: 26px;
+  font-size: 30px;
   font-weight: 600;
 }
 
@@ -47,7 +55,7 @@ h2.crimson {
 }
 
 h3 {
-  font-size: 12px;
+  font-size: 18px;
   font-weight: 400;
 }
 
@@ -76,16 +84,22 @@ a {
 
 /* ##### header ##### */
 #main-header {
+  width: 100vw;
   height: 80px;
+  position: fixed;
+  top: 0;
+  background: #fff;
+  z-index: 9999;
+  border-bottom: 0.5px solid #ccc;
 }
 
 #main-header .container {
+  width: 100%;
   height: 100%;
   display: flex;
   padding: 0 20px;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 0.5px solid #ccc;
 }
 
 #main-header h1 img {
@@ -99,10 +113,10 @@ a {
 /* ##### site-map ##### */
 
 #site-map {
-  position: absolute;
+  position: fixed;
   width: 100vw;
   height: 100vh;
-  z-index: 9999;
+  z-index: 10000;
   top: 0;
 }
 
@@ -112,6 +126,7 @@ a {
   background-image: url(../images/sitemap-bg-mob.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   height: 100%;
 }
 
@@ -134,7 +149,7 @@ a {
 }
 
 #site-map .site-map-menu {
-  padding: 0 20px;
+  padding: 20px;
   height: calc(100% - 80px);
 }
 
@@ -148,7 +163,7 @@ a {
 #site-map .site-map-menu .depth1 > li > a {
   font-size: 18px;
   font-weight: 700;
-  line-height: 40px;
+  line-height: 45px;
 }
 
 #site-map .site-map-menu .depth2 {
@@ -158,7 +173,7 @@ a {
 }
 
 #site-map .site-map-menu .depth2 > li > a {
-  font-size: 14px;
+  font-size: 16px;
   color: #444444;
   line-height: 30px;
 }
@@ -170,6 +185,7 @@ a {
   opacity: 0;
   transition: 0.3s;
 }
+
 #site-map.show {
   height: 100vh;
   overflow: visible;
@@ -197,6 +213,16 @@ a {
 #main-visual h1 {
   color: #fff;
   text-align: center;
+  line-height: 2em;
+}
+
+#main-visual .main-visual-line {
+  background: #fff;
+  height: 1px;
+  width: 80px;
+  display: inline-block;
+  position: relative;
+  bottom: 5px;
 }
 
 /* ##### section1 ##### */
@@ -212,11 +238,10 @@ a {
 .section1 .notice-box {
   width: 100%;
   position: relative;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 .section1 .notice-box .notice-title-list {
-  font-size: 12px;
   border-bottom: 0.3px solid #888;
   margin-bottom: 10px;
 }
@@ -234,20 +259,20 @@ a {
 }
 
 .section1 .notice-box .btn-plus {
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
   font-size: 20px;
   color: #888;
   border: 1px solid #888;
   background: #fff;
   position: absolute;
-  top: 2px;
+  top: 0px;
   right: 0px;
   cursor: pointer;
 }
 
 .section1 .notice-box .notice-list {
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .section1 .notice-box .notice-list li {
@@ -255,8 +280,8 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 10px;
   margin-bottom: 10px;
+  gap: 10px;
 }
 
 .section1 .notice-box .notice-list li:last-child {
@@ -272,6 +297,7 @@ a {
 }
 
 .section1 .notice-box .notice-list b {
+  font-size: 13px;
   border: none;
   background: #d9534f;
   color: #fff;
@@ -300,37 +326,45 @@ a {
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 20px;
-  box-shadow: 4px 4px 5px #ccc;
-  border-radius: 10px;
+  /* box-shadow: 4px 4px 5px #ccc;
+  border-radius: 10px; */
+}
+
+.section1 .schedule-box .schedule-list {
+  order: 2;
+}
+.section1 .schedule-box .calendar-box {
+  order: 1;
 }
 
 /* 학사일정-달력 */
+
 .section1 .schedule-box .calendar-box {
   position: relative;
-  padding-bottom: 20px;
-  border-bottom: 0.1px solid #ccc;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  /* border-right: 0.1px solid #ccc; */
+  text-align: left;
+  margin-bottom: 20px;
 }
 
 .section1 .schedule-box .btn-month {
-  width: 70px;
-  height: 25px;
+  padding: 10px;
+  padding-bottom: 5px;
   border: none;
-  background: var(--main-color);
-  color: #fff;
-  border-radius: 4px;
-  font-size: 11px;
+  color: #000;
+  text-align: left;
+  background: none;
+  border-bottom: 5px solid var(--main-color);
+  font-weight: 700;
 }
 
 .section1 .schedule-box .calendar {
-  font-size: 11px;
-  width: 250px;
+  font-size: 12px;
+  width: 100%;
+  height: 200px;
   text-align: center;
-  margin-top: 10px;
   line-height: 23px;
+  border-top: 0.3px solid #888;
+  padding-top: 10px;
 }
 
 .section1 .schedule-box .calendar th,
@@ -345,6 +379,29 @@ td {
 .section1 .schedule-box .calendar td {
   cursor: pointer;
   position: relative;
+}
+
+/* calendar style */
+.section1 .calendar .sat {
+  color: #17a1fa;
+}
+
+.section1 .calendar .sun {
+  color: #d9534f;
+}
+
+.section1 .calendar td.choosed {
+  border-radius: 10px;
+  background: rgba(0, 102, 64, 0.2);
+}
+
+.section1 .calendar td.something::after {
+  content: "·";
+  font-size: 20px;
+  color: var(--main-color);
+  position: absolute;
+  top: 9px;
+  left: 14px;
 }
 
 /* 학사일정-세부일정 */
@@ -380,30 +437,6 @@ td {
 
 .section1 .schedule-box .schedule-list > ul {
   font-size: 12px;
-}
-
-/* calendar style */
-
-.section1 .calendar .sat {
-  color: #17a1fa;
-}
-
-.section1 .calendar .sun {
-  color: #d9534f;
-}
-
-.section1 .calendar td.choosed {
-  border-radius: 10px;
-  background: rgba(0, 102, 64, 0.2);
-}
-
-.section1 .calendar td.something::after {
-  content: "·";
-  font-size: 20px;
-  color: var(--main-color);
-  position: absolute;
-  top: 9px;
-  left: 14px;
 }
 
 /* ##### section2 ##### */

@@ -6,6 +6,12 @@
 /* font-family: 'Nanum Myeongjo', serif; */
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap");
 
+/* font-flamily: "ehwa" */
+@font-face {
+  font-family: "ehwa";
+  src: url(../fonts/ewha.ttf);
+}
+
 /* 미디어쿼리 */
 .mob-only {
   display: none;
@@ -19,7 +25,7 @@
 
 body {
   font-family: "Noto Sans KR", sans-serif;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 h1 {
@@ -35,8 +41,10 @@ h1.crimson {
 }
 
 h2 {
+  font-family: "ehwa", "Noto Sans KR", sans-serif;
   font-size: 30px;
   font-weight: 500;
+  line-height: 1.3em;
 }
 
 h3 {
@@ -47,6 +55,10 @@ h3 {
 h4 {
   font-size: 24px;
   font-weight: 700;
+}
+
+p {
+  line-height: 1.7em;
 }
 
 a {
@@ -71,7 +83,13 @@ a {
 /* ##### header ##### */
 
 #main-header {
+  width: 100%;
   height: 80px;
+  position: fixed;
+  top: 0;
+  background: #fff;
+  z-index: 1;
+  border-bottom: 0.5px solid #ccc;
 }
 
 #main-header .container {
@@ -79,13 +97,10 @@ a {
   padding: 0 20px;
   justify-content: space-between;
   align-items: center;
-  /* outline: 1px solid blue; */
-  border-bottom: 0.5px solid #ccc;
 }
 
 #gnb {
   z-index: 100;
-  /* outline: 1px solid red; */
 }
 
 /* 1단계 메뉴 */
@@ -94,7 +109,7 @@ a {
   height: 80px;
 }
 #gnb .depth1 > li {
-  width: 100px;
+  width: 110px;
   height: 100%;
   display: inline-block;
   margin: 0 10px;
@@ -103,7 +118,7 @@ a {
 }
 #gnb .depth1 > li > a {
   line-height: 80px;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
   display: block;
 }
@@ -115,7 +130,7 @@ a {
   border: 0.1px solid #ccc;
   margin-top: 1px;
   padding: 10px;
-  height: 0;
+  max-height: 0;
   overflow: hidden;
   opacity: 0;
 }
@@ -140,33 +155,33 @@ a {
 #gnb .depth1 > li::after {
   content: "";
   width: 0px;
-  height: 2px;
+  height: 3px;
   background: var(--main-color);
   position: absolute;
   left: 0;
-  top: 79px;
+  top: 78px;
   transition: 0.5s;
 }
 #gnb .depth1 > li:hover::after {
-  width: 100px;
+  width: 110px;
 }
 
 #gnb .depth1 > li:hover .depth2 {
-  height: auto;
+  max-height: 200px;
   opacity: 1;
-  transition: 0.4s;
+  transition: 0.5s;
 }
 
 #gnb .depth2 > li:hover > a {
   text-decoration: underline;
 }
 
-/* ##### 사이트맵 ##### */
+/* ##### site-map ##### */
 
 #site-map {
-  position: absolute;
+  position: fixed;
   width: 100%;
-  height: 800px;
+  height: 820px;
   z-index: 9999;
   top: 0;
 }
@@ -176,6 +191,8 @@ a {
   max-width: 1440px;
   background-image: url(../images/sitemap-bg.jpg);
   background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   height: 100%;
   box-shadow: 4px 4px 5px #ccc;
 }
@@ -219,9 +236,8 @@ a {
 }
 
 #site-map .site-map-menu .depth2 > li > a {
-  font-size: 15px;
   color: #444444;
-  line-height: 30px;
+  line-height: 35px;
 }
 
 /* 사이트맵 전환 효과 */
@@ -232,7 +248,7 @@ a {
   transition: 0.5s;
 }
 #site-map.show {
-  height: 800px;
+  height: 820px;
   overflow: visible;
   opacity: 1;
 }
@@ -242,6 +258,7 @@ body {
   background-image: url(../images/sitemap-bg.jpg);
   background-repeat: no-repeat;
   background-position: 50% 86%;
+  padding-top: 80px;
 }
 
 /* ##### wrap ##### */
@@ -292,6 +309,7 @@ body {
 
 /* ##### main ##### */
 main {
+  /* margin-left: 340px; */
   width: 1100px;
   position: relative;
 }
@@ -303,13 +321,13 @@ main {
 }
 
 .sub-path {
-  height: 53px;
+  height: 55px;
   /* padding-left: 10px; */
   border-bottom: 0.5px solid rgba(0, 0, 0, 0.3);
   display: flex;
   align-items: center;
   gap: 6px;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .sub-path a {
@@ -317,22 +335,31 @@ main {
 }
 
 /* ##### footer ##### */
-
 #main-footer {
   margin-top: 50px;
+  background: #393939;
 }
 
 #main-footer .container {
-  background: #393939;
-  padding: 50px;
+  padding: 30px 50px 40px;
   color: #999;
   font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #main-footer .footer-menu {
   margin-bottom: 20px;
   display: flex;
-  gap: 20px;
+  justify-content: space-between;
+  border-bottom: 0.1px solid #666;
+  padding-bottom: 5px;
+}
+
+#main-footer .footer-menu .text-box {
+  display: flex;
+  gap: 10px;
 }
 
 #main-footer .footer-menu a {
@@ -344,10 +371,19 @@ main {
   color: #ffcc33;
 }
 
+#main-footer .footer-menu .sns-icon {
+  display: flex;
+  gap: 10px;
+}
+
+#main-footer .footer-menu .sns-icon img {
+  width: 30px;
+}
+
 #main-footer .address {
   display: flex;
-  gap: 20px;
-  margin-bottom: 20px;
+  gap: 10px;
+  margin-bottom: 10px;
 }
 
 #main-footer .copy {
@@ -407,36 +443,57 @@ main {
   word-break: keep-all;
 }
 
+/* #sub1-1 .section1 .impact {
+  font-weight: 700;
+  font-size: larger;
+} */
+
 /* ##### section2 ##### */
 
 #sub1-1 .section2 {
   padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #sub1-1 .section2 .content {
   display: flex;
   align-items: center;
   gap: 40px;
+  margin-bottom: 50px;
 }
 
-#sub1-1 .section2 .content.left-55 {
+/* #sub1-1 .section2 .content.left-55 {
   margin-left: 56px;
 }
 
 #sub1-1 .section2 .content.left-170 {
   margin-left: 170px;
-}
+} */
 
 #sub1-1 .section2 .text-box {
-  width: 440px;
+  width: 540px;
 }
 
-#sub1-1 .section2 .text-box hr {
-  margin-top: 5px;
-  margin-bottom: 15px;
+#sub1-1 .section2 .text-box h4 {
+  display: inline-block;
+  padding-bottom: 10px;
+  position: relative;
+}
+
+#sub1-1 .section2 .text-box h4::after {
+  content: "";
+  width: 100%;
+  height: 5px;
+  background: var(--main-color);
+  position: absolute;
+  bottom: 0px;
+  left: 0;
 }
 
 #sub1-1 .section2 .text-box p {
+  padding-top: 10px;
   word-break: keep-all;
 }
 
@@ -461,7 +518,6 @@ main {
 
 /* sub1-2 */
 /* ##### sub1-2 section1 ##### */
-
 #sub1-2 .section1 {
   width: 1100px;
   padding: 50px 0;
@@ -537,6 +593,10 @@ main {
   font-family: "Noto Sans KR", sans-serif;
   font-size: 40px;
   margin-bottom: 50px;
+}
+
+#sub1-2 #history .box2 {
+  border-bottom: 0.3px solid #ccc;
 }
 
 #sub1-2 #history .box2 > h4 {
@@ -791,7 +851,6 @@ main {
 }
 
 #sub4-1 .section3 {
-  width: 1000px;
   height: 150px;
   display: flex;
   /* outline: 1px solid red; */
@@ -828,9 +887,54 @@ main {
 
 #sub4-1 .section4 .calendar-box {
   width: 100%;
-  display: flex;
   padding-top: 20px;
+}
+
+#sub4-1 .section4 .calendar-box .calendar-title-group {
+  width: 100%;
+  display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+#sub4-1 .section4 .calendar-title-group h3 {
+  font-size: 28px;
+  padding-bottom: 10px;
+  font-weight: 700;
+  text-align: left;
+  position: relative;
+}
+
+#sub4-1 .section4 .calendar-title-group h3::after {
+  content: "";
+  width: 100%;
+  height: 5px;
+  background: var(--main-color);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+#sub4-1 .section4 .calendar-title-group .calendar-btn {
+  display: flex;
+  padding: 20px 0;
+  gap: 20px;
+  align-items: center;
+}
+
+#sub4-1 .section4 .calendar-title-group .calendar-btn button {
+  padding: 10px;
+  height: 70%;
+  background: var(--main-color);
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 700;
+}
+
+#sub4-1 .section4 .calendar-title-group .calendar-btn .btn-arrow {
+  background: none;
 }
 
 #sub4-1 .section4 .calendar {
@@ -839,11 +943,6 @@ main {
   text-align: center;
   line-height: 30px;
   border-collapse: collapse;
-}
-
-#sub4-1 .section4 .calendar caption {
-  font-size: 20px;
-  margin-bottom: 20px;
 }
 
 #sub4-1 .section4 .calendar th,

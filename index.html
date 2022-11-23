@@ -6,6 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>이화여자대학교 무용과</title>
 
+    <!-- 검색엔진 최적화 -->
+    <meta name="og:site_name" content="이화여자대학교 무용과" />
+    <meta name="og:title" content="이화여자대학교 무용과" />
+    <meta
+      name="og:description"
+      content="이화여자대학교 무용과 홈페이지 입니다."
+    />
+    <meta name="og:type" content="website" />
+    <meta
+      name="keywords"
+      content="이화여자대학교, 이화여대, 무용학과, 무용과"
+    />
+    <meta name="author" content="김민수, 최정호, 허희연" />
+    <meta name="description" content="이화여자대학교 무용과 홈페이지입니다." />
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./images/symbol-mark_favicon.png" />
+
     <!-- css style -->
     <link
       rel="stylesheet"
@@ -138,11 +156,12 @@
     <section id="main-visual">
       <div class="container">
         <h1>
-          이화여자대학교 무용과<br />
-          <span class="crimson"
-            >Ewha Womans University <br class="mob-only" />
-            Department of Dance</span
-          >
+          <span class="crimson">Ewha Womans University </span> <br />
+          <div class="main-visual-line"></div>
+          이화여자대학교 무용과
+          <div class="main-visual-line"></div>
+          <br />
+          <span class="crimson"> Department of Dance</span>
         </h1>
       </div>
     </section>
@@ -250,7 +269,7 @@
         <!-- schedule-box -->
         <div class="schedule-box">
           <div class="calendar-box">
-            <button class="btn-month">November</button>
+            <button class="btn-month">11월</button>
             <table class="calendar">
               <tr>
                 <th class="sun">Su</th>
@@ -315,7 +334,8 @@
           </div>
           <!-- // calendar-box -->
           <div class="schedule-list">
-            <div class="schedule-date">
+            <a href="#">학사일정</a>
+            <!-- <div class="schedule-date">
               <button class="btn-prev">
                 <img src="./images/main-schedule-icon-prev.svg" alt="이전" />
               </button>
@@ -323,8 +343,8 @@
               <button class="btn-next">
                 <img src="./images/main-schedule-icon-next.svg" alt="다음" />
               </button>
-            </div>
-            <a href="#">학사일정</a>
+            </div> -->
+
             <ul>
               <li>· 2학기 휴학원서 제출 마감</li>
             </ul>
@@ -355,7 +375,7 @@
             <h2 class="crimson">Reservation</h2>
             <p>
               이화여자대학교 무용(학)과 이번 학기 등록 학생들은
-              <br class="mob-only" />
+              <br />
               홈페이지를 통해 연습실 예약을 할 수 있습니다.
             </p>
             <a href="./pages/sub4-1.html" class="btn-reservation">
@@ -455,9 +475,16 @@
     <footer id="main-footer">
       <div class="container">
         <div class="footer-menu">
-          <a class="ft-str" href="#">개인정보 처리방침</a><span>|</span
-          ><a href="#">이메일 무단수집거부</a>
+          <div class="text-box">
+            <a class="ft-str" href="#">개인정보 처리방침</a><span>|</span
+            ><a href="#">이메일 무단수집거부</a>
+          </div>
+          <div class="sns-icon">
+            <img src="./images/facebook.svg" alt="facebook" />
+            <img src="./images/instagram.svg" alt="instagram" />
+          </div>
         </div>
+        <!-- <hr /> -->
         <div class="address">
           <p>
             03760 서울특별시 서대문구 이화여대길 52

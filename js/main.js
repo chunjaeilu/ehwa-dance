@@ -1,4 +1,6 @@
 /* main.js */
+var maker = " 만든사람 : 김민수, 최정호, 허희연";
+console.log(maker);
 
 /* ##### site-map ##### */
 $(function () {
