@@ -895,14 +895,13 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
+  padding: 20px;
 }
 
 #sub4-1 .section4 .calendar-title-group h3 {
   font-size: 28px;
   padding-bottom: 10px;
   font-weight: 700;
-  text-align: left;
   position: relative;
 }
 
@@ -918,7 +917,6 @@ main {
 
 #sub4-1 .section4 .calendar-title-group .calendar-btn {
   display: flex;
-  padding: 20px 0;
   gap: 20px;
   align-items: center;
 }

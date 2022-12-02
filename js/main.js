@@ -196,15 +196,15 @@ $(function () {
     $(".section1 .schedule-list .schedule-date p").html(choosedDate);
     date = $(this).html();
     /* 해당 날짜 학사일정 출력 */
-    $(".section1 .schedule-list ul").empty();
+    /* $(".section1 .schedule-list ul").empty();
 
     $(".section1 .schedule-list ul").append(
       `<li>${scheduleList[date].list}</li>`
-    );
+    ); */
   });
 
   /* 버튼으로 날짜 선택 */
-  $(".section1 .schedule-list .schedule-date .btn-prev").on(
+  /* $(".section1 .schedule-list .schedule-date .btn-prev").on(
     "click",
     function () {
       date--;
@@ -213,18 +213,18 @@ $(function () {
       $(".section1 .schedule-box .calendar td").removeClass("choosed");
       $(`.section1 .schedule-box .calendar td:contains(${date})`)
         .eq(0)
-        .addClass("choosed");
+        .addClass("choosed"); */
 
-      /* 해당 날짜 학사일정 출력 */
-      $(".section1 .schedule-list ul").empty();
+  /* 해당 날짜 학사일정 출력 */
+  /* $(".section1 .schedule-list ul").empty();
 
       $(".section1 .schedule-list ul").append(
         `<li>${scheduleList[date].list}</li>`
       );
     }
-  );
+  ); */
 
-  $(".section1 .schedule-list .schedule-date .btn-next").on(
+  /* $(".section1 .schedule-list .schedule-date .btn-next").on(
     "click",
     function () {
       date++;
@@ -233,14 +233,14 @@ $(function () {
       $(".section1 .schedule-box .calendar td").removeClass("choosed");
       $(`.section1 .schedule-box .calendar td:contains(${date})`)
         .eq(0)
-        .addClass("choosed");
+        .addClass("choosed"); */
 
-      /* 해당 날짜 학사일정 출력 */
-      $(".section1 .schedule-list ul").empty();
+  /* 해당 날짜 학사일정 출력 */
+  /* $(".section1 .schedule-list ul").empty();
 
       $(".section1 .schedule-list ul").append(
         `<li>${scheduleList[date].list}</li>`
       );
     }
-  );
+  ); */
 });

@@ -43,14 +43,14 @@ h1.crimson {
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 700;
 }
 
 h2 .crimson,
 h2.crimson {
   font-family: "Crimson Text", serif;
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 600;
 }
 
@@ -200,7 +200,7 @@ a {
 
 #main-visual .container {
   height: 100%;
-  background-image: url("../images/main-visual-1.png");
+  background-image: url("../images/main-visual-1.jpg");
   display: flex;
   align-items: center;
   justify-content: center;
@@ -326,45 +326,37 @@ a {
   width: 100%;
   display: flex;
   flex-direction: column;
-  /* box-shadow: 4px 4px 5px #ccc;
-  border-radius: 10px; */
-}
-
-.section1 .schedule-box .schedule-list {
-  order: 2;
-}
-.section1 .schedule-box .calendar-box {
-  order: 1;
+  padding: 20px;
+  box-shadow: 4px 4px 5px #ccc;
+  border-radius: 10px;
 }
 
 /* 학사일정-달력 */
-
 .section1 .schedule-box .calendar-box {
   position: relative;
-  /* border-right: 0.1px solid #ccc; */
-  text-align: left;
-  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 0.1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .section1 .schedule-box .btn-month {
-  padding: 10px;
-  padding-bottom: 5px;
+  padding: 5px 5px 2px;
   border: none;
   color: #000;
+  font-size: 15px;
   text-align: left;
   background: none;
   border-bottom: 5px solid var(--main-color);
-  font-weight: 700;
 }
 
 .section1 .schedule-box .calendar {
   font-size: 12px;
-  width: 100%;
-  height: 200px;
+  width: 250px;
   text-align: center;
+  margin-top: 10px;
   line-height: 23px;
-  border-top: 0.3px solid #888;
-  padding-top: 10px;
 }
 
 .section1 .schedule-box .calendar th,
@@ -381,7 +373,6 @@ td {
   position: relative;
 }
 
-/* calendar style */
 .section1 .calendar .sat {
   color: #17a1fa;
 }
@@ -391,26 +382,26 @@ td {
 }
 
 .section1 .calendar td.choosed {
-  border-radius: 10px;
+  border-radius: 15px;
   background: rgba(0, 102, 64, 0.2);
 }
 
 .section1 .calendar td.something::after {
   content: "·";
   font-size: 20px;
+  font-weight: 700;
   color: var(--main-color);
   position: absolute;
-  top: 9px;
-  left: 14px;
+  top: 10px;
+  left: calc(50% - 3px);
 }
 
 /* 학사일정-세부일정 */
 .section1 .schedule-box .schedule-list {
-  font-size: 11px;
   height: 250px;
 }
 
-.section1 .schedule-box .schedule-list .schedule-date {
+/* .section1 .schedule-box .schedule-list .schedule-date {
   margin-top: 15px;
   text-align: center;
   display: flex;
@@ -422,21 +413,23 @@ td {
 .section1 .schedule-box .schedule-list .schedule-date button {
   background: none;
   border: none;
-}
+} */
 
 .section1 .schedule-box .schedule-list > a {
-  display: block;
-  width: 60px;
-  line-height: 25px;
-  background: var(--main-color);
+  display: inline-block;
+  padding: 15px 5px 5px;
   text-align: center;
-  border-radius: 4px;
-  color: #fff;
-  margin-bottom: 10px;
+  color: #000;
+  line-height: 21px;
+  border-bottom: 5px solid var(--main-color);
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 15px;
 }
 
 .section1 .schedule-box .schedule-list > ul {
-  font-size: 12px;
+  font-size: 14px;
 }
 
 /* ##### section2 ##### */
@@ -452,7 +445,7 @@ td {
 
 .section2 .reservation-banner > img {
   width: 100%;
-  filter: blur(3px);
+  filter: blur(2px);
 }
 
 .section2 .reservation-banner .reservation-link {
@@ -466,10 +459,26 @@ td {
   justify-content: center;
   align-items: center;
   text-shadow: 0px 1px 4px #000;
+  gap: 5px;
+}
+
+.section2 .reservation-banner .reservation-link > h2 {
+  position: relative;
+}
+
+.section2 .reservation-banner .reservation-link > h2::before {
+  content: "Reservation";
+  font-family: "crimson text", serif;
+  font-size: 100px;
+  color: rgba(255, 255, 255, 0.3);
+  position: absolute;
+  left: -30px;
+  top: 50px;
+  text-shadow: none;
 }
 
 .section2 .reservation-banner .reservation-link > p {
-  font-size: 12px;
+  font-size: 14px;
   margin-bottom: 15px;
 }
 
@@ -477,12 +486,11 @@ td {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 120px;
-  height: 35px;
+  padding: 7px 10px;
   border: 0.5px solid #fff;
   font-weight: 700;
   color: #fff;
-  font-size: 12px;
+  font-size: 14px;
   text-shadow: none;
 }
 
@@ -729,10 +737,10 @@ td {
 /* ##### footer ##### */
 #main-footer {
   margin-top: 50px;
+  background: #393939;
 }
 
 #main-footer .container {
-  background: #393939;
   padding: 35px 20px;
   color: #999;
   font-size: 12px;
@@ -740,6 +748,13 @@ td {
 
 #main-footer .footer-menu {
   margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 0.1px solid #666;
+  padding-bottom: 5px;
+}
+
+#main-footer .footer-menu .text-box {
   display: flex;
   gap: 10px;
 }
@@ -751,6 +766,15 @@ td {
 #main-footer .footer-menu a.ft-str {
   font-weight: 700;
   color: #ffcc33;
+}
+
+#main-footer .footer-menu .sns-icon {
+  display: flex;
+  gap: 10px;
+}
+
+#main-footer .footer-menu .sns-icon img {
+  width: 30px;
 }
 
 #main-footer .address {

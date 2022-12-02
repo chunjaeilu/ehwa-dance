@@ -41,9 +41,9 @@ $(function () {
   let toDay = new Date();
   let toDate = toDay.getDate();
   let date = toDate;
-  $(`#sub4-1 .section4 .calendar-box .calendar td:contains(${date})`).addClass(
-    "choosed"
-  );
+  $(`#sub4-1 .section4 .calendar-box .calendar td:contains(${date})`)
+    .eq(0)
+    .addClass("choosed");
 
   $("#sub4-1 .section4 .calendar-box .calendar td").on("click", function () {
     $("#sub4-1 .section4 .calendar-box .calendar td").removeClass("choosed");
@@ -52,7 +52,7 @@ $(function () {
     date = $(this).html();
 
     /* 선택날짜 팝업창 표시 */
-    choosedDate = "2022.11." + date;
+    choosedDate = "2022.12." + date;
     $("#sub4-1 .section4 .popup-reservation h3").html(choosedDate);
   });
 
@@ -92,9 +92,9 @@ $(function () {
   /* today 버튼 클릭 효과 */
   $("#sub4-1 .section4 button#today").on("click", function () {
     $("#sub4-1 .section4 .calendar-box .calendar td").removeClass("choosed");
-    $(
-      `#sub4-1 .section4 .calendar-box .calendar td:contains(${toDate})`
-    ).addClass("choosed");
+    $(`#sub4-1 .section4 .calendar-box .calendar td:contains(${toDate})`)
+      .eq(0)
+      .addClass("choosed");
     date = toDate;
     $("#sub4-1 .section4 .popup-reservation").removeClass("view");
   });
